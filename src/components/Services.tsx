@@ -20,37 +20,37 @@ const services = [
   {
     icon: Car,
     title: "Transporte Executivo Corporativo",
-    desc: "Atendimento exclusivo com motoristas profissionais, pontualidade e discrição para executivos e viagens de negócios.",
+    desc: "Gestão dedicada com motoristas profissionais, pontualidade e discrição para executivos e deslocamentos corporativos estratégicos.",
     image: serv01,
   },
   {
     icon: Plane,
-    title: "Traslados de Aeroporto",
-    desc: "Transfer corporativo com monitoramento de voo, recepção personalizada e frota sedan ou van para sua equipe.",
+    title: "Traslados Aeroportuários",
+    desc: "Transfer corporativo com monitoramento de voo, recepção personalizada e frota sedan ou van para equipes e diretoria.",
     image: serv02,
   },
   {
     icon: Heart,
-    title: "Transporte para Noivas e Debutantes",
-    desc: "Elegância, pontualidade e atenção aos detalhes para ocasiões inesquecíveis e celebrações especiais.",
+    title: "Transporte para Eventos Especiais",
+    desc: "Elegância, pontualidade e atenção aos detalhes para ocasiões especiais e celebrações corporativas ou particulares.",
     image: serv03,
   },
   {
     icon: Package,
-    title: "Transporte Rápido de Encomendas",
-    desc: "Agilidade e eficiência em coletas e entregas através de veículos utilitários dedicados.",
+    title: "Logística de Encomendas",
+    desc: "Operação ágil de coletas e entregas com veículos utilitários dedicados e rastreamento em tempo real.",
     image: serv04,
   },
   {
     icon: Bus,
-    title: "Locação de Van para Viagens e Eventos",
-    desc: "Locação de frota com motorista para congressos, feiras, eventos corporativos e viagens empresariais.",
+    title: "Locação de Frotas com Motorista",
+    desc: "Frotas sob medida para congressos, feiras, eventos corporativos e operações empresariais de grande porte.",
     image: serv05,
   },
   {
     icon: Bike,
-    title: "Transporte de Documentos (Motoboy)",
-    desc: "Solução rápida e confiável para entregas expressas de documentos empresariais.",
+    title: "Transporte de Documentos",
+    desc: "Solução expressa e confiável para entregas corporativas de documentos sensíveis e correspondências urgentes.",
     image: serv06,
   },
 ];
@@ -76,14 +76,14 @@ const Services = () => (
           custom={1}
           className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-white"
         >
-          Soluções <span className="text-accent">completas</span> em transporte corporativo
+          Soluções <span className="text-accent">integradas</span> de mobilidade corporativa
         </motion.h2>
         <motion.p
           variants={fadeUp}
           custom={2}
-          className="text-white/60 text-lg max-w-2xl mx-auto"
+          className="text-white/50 text-lg max-w-2xl mx-auto"
         >
-          Do transporte executivo diário à locação de frota para eventos — atendemos todas as demandas da sua empresa.
+          Do transporte executivo diário à gestão de frotas para operações de grande porte — estrutura completa para sua empresa.
         </motion.p>
       </motion.div>
 
@@ -96,7 +96,7 @@ const Services = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-white/5 border border-white/10 rounded-xl overflow-hidden group hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300"
+            className="bg-white/[0.03] border border-white/8 rounded-xl overflow-hidden group hover:border-accent/30 transition-all duration-300"
           >
             <div className="h-48 overflow-hidden">
               <img
@@ -107,11 +107,11 @@ const Services = () => (
               />
             </div>
             <div className="p-8">
-              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-accent/8 flex items-center justify-center mb-6 group-hover:bg-accent/15 transition-colors">
                 <s.icon className="text-accent" size={26} />
               </div>
               <h3 className="font-heading font-bold text-lg mb-3 text-white">{s.title}</h3>
-              <p className="text-white/60 text-sm leading-relaxed">
+              <p className="text-white/50 text-sm leading-relaxed">
                 {s.desc}
               </p>
             </div>
@@ -128,12 +128,12 @@ const Services = () => (
         className="text-center mt-14"
       >
         <a
-          href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20UseMOB."
+          href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa."
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md font-heading font-semibold hover:bg-accent-hover transition-colors shadow-lg shadow-accent/25"
+          className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md font-heading font-semibold hover:bg-accent-hover transition-colors"
         >
-          Solicitar cotação para sua empresa
+          Solicitar Proposta Corporativa
           <ArrowRight size={18} />
         </a>
       </motion.div>

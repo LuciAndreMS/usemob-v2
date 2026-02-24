@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import AuthorityBar from "@/components/AuthorityBar";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Differentials from "@/components/Differentials";
@@ -14,6 +15,7 @@ const Index = () => (
     <Navbar />
     <main>
       <Hero />
+      <AuthorityBar />
       <About />
       <Services />
       <Differentials />

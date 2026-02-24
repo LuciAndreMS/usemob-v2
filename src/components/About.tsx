@@ -17,19 +17,19 @@ const pillars = [
   {
     icon: Shield,
     title: "Nossa Missão",
-    text: "Prestar serviços de transporte com excelência e responsabilidade, conquistando a confiança de nossos clientes através da ética, pontualidade e comprometimento.",
+    text: "Oferecer soluções de mobilidade corporativa com excelência operacional, conquistando a confiança de nossos clientes por meio de governança, pontualidade e comprometimento institucional.",
     image: aboutMission,
   },
   {
     icon: Clock,
     title: "Nossa Visão",
-    text: "Ser referência em mobilidade corporativa, superando expectativas ao oferecer segurança, agilidade e atendimento personalizado.",
+    text: "Ser a referência nacional em mobilidade corporativa, superando expectativas através de processos estruturados, segurança e atendimento estratégico.",
     image: aboutVision,
   },
   {
     icon: Award,
     title: "Nossos Valores",
-    text: "Honestidade, credibilidade, pontualidade, comprometimento, responsabilidade, transparência e respeito a clientes, parceiros e colaboradores.",
+    text: "Integridade, credibilidade, pontualidade, comprometimento, responsabilidade, transparência e respeito a clientes, parceiros e colaboradores.",
     image: aboutPlan,
   },
 ];
@@ -48,24 +48,24 @@ const About = () => (
           custom={0}
           className="text-accent font-heading text-sm font-semibold tracking-widest uppercase"
         >
-          Quem Somos
+          Sobre a UseMOB
         </motion.span>
         <motion.h2
           variants={fadeUp}
           custom={1}
           className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-6 text-foreground"
         >
-          Mais de 10 anos de <span className="text-accent">excelência</span> em transporte corporativo
+          Mais de uma década de <span className="text-accent">confiança</span> no mercado corporativo
         </motion.h2>
         <motion.p
           variants={fadeUp}
           custom={2}
           className="text-muted-foreground text-lg leading-relaxed"
         >
-          A UseMOB é especializada na locação de veículos com motorista para
-          empresas. Nosso atendimento personalizado garante pontualidade,
-          segurança e motoristas profissionais criteriosamente selecionados —
-          tudo para que sua operação logística funcione com máxima eficiência.
+          A UseMOB é especializada em gestão de mobilidade corporativa com
+          motoristas profissionais. Nossa operação garante governança, controle
+          de custos e eficiência logística — atendendo grandes empresas que
+          demandam excelência em cada deslocamento.
         </motion.p>
       </motion.div>
 
@@ -78,7 +78,7 @@ const About = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl overflow-hidden hover:border-accent/40 hover:shadow-lg transition-all duration-300"
+            className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-md transition-all duration-300"
           >
             <div className="h-48 overflow-hidden">
               <img
@@ -89,7 +89,7 @@ const About = () => (
               />
             </div>
             <div className="p-8">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-lg bg-accent/8 flex items-center justify-center mb-5">
                 <p.icon className="text-accent" size={22} />
               </div>
               <h3 className="font-heading font-bold text-xl mb-3 text-foreground">{p.title}</h3>

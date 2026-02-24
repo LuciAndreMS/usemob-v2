@@ -15,7 +15,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-navy/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-navy/30">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#inicio" className="flex items-center gap-2">
           <span className="font-heading text-2xl font-bold tracking-tight text-white">
@@ -29,18 +29,18 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-white/70 hover:text-accent transition-colors font-medium"
+              className="text-sm text-white/60 hover:text-white transition-colors font-medium"
             >
               {l.label}
             </a>
           ))}
           <a
-            href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o."
+            href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa."
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-accent-hover transition-colors shadow-md shadow-accent/20"
+            className="bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-accent-hover transition-colors"
           >
-            Solicitar Cotação
+            Proposta Corporativa
           </a>
         </div>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-navy border-b border-white/10 overflow-hidden"
+            className="md:hidden bg-navy border-b border-white/5 overflow-hidden"
           >
             <div className="container py-4 flex flex-col gap-4">
               {links.map((l) => (
@@ -69,18 +69,18 @@ const Navbar = () => {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm text-white/70 hover:text-accent transition-colors font-medium"
+                  className="text-sm text-white/60 hover:text-white transition-colors font-medium"
                 >
                   {l.label}
                 </a>
               ))}
               <a
-                href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o."
+                href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center"
               >
-                Solicitar Cotação
+                Proposta Corporativa
               </a>
             </div>
           </motion.div>

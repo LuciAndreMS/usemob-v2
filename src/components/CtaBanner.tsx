@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const CtaBanner = () => (
-  <section className="py-20 bg-primary">
+  <section className="py-24 bg-primary">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -21,7 +21,7 @@ const CtaBanner = () => (
           href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o."
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 rounded-md font-heading font-semibold hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-md font-heading font-semibold hover:bg-white/90 transition-colors"
         >
           Falar no WhatsApp
           <ArrowRight size={18} />

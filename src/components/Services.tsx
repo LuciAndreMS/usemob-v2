@@ -44,7 +44,7 @@ const services = [
 ];
 
 const Services = () => (
-  <section id="servicos" className="section-padding bg-secondary">
+  <section id="servicos" className="section-padding bg-muted">
     <div className="container">
       <motion.div
         initial="hidden"
@@ -55,14 +55,14 @@ const Services = () => (
         <motion.span
           variants={fadeUp}
           custom={0}
-          className="text-primary font-heading text-sm font-semibold tracking-widest uppercase"
+          className="text-accent font-heading text-sm font-semibold tracking-widest uppercase"
         >
           Serviços
         </motion.span>
         <motion.h2
           variants={fadeUp}
           custom={1}
-          className="text-3xl md:text-4xl font-heading font-bold mt-4"
+          className="text-3xl md:text-4xl font-heading font-bold mt-4 text-foreground"
         >
           Soluções completas em transporte
         </motion.h2>
@@ -77,12 +77,12 @@ const Services = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl p-8 group hover:border-primary/40 transition-all duration-300"
+            className="bg-card border border-border rounded-xl p-8 group hover:border-accent/40 hover:shadow-md transition-all duration-300"
           >
-            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-              <s.icon className="text-primary" size={26} />
+            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+              <s.icon className="text-accent" size={26} />
             </div>
-            <h3 className="font-heading font-bold text-lg mb-3">{s.title}</h3>
+            <h3 className="font-heading font-bold text-lg mb-3 text-foreground">{s.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {s.desc}
             </p>

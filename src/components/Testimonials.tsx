@@ -45,10 +45,10 @@ const Testimonials = () => (
           Depoimentos
         </motion.span>
         <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-foreground">
-          A <span className="text-accent">confiança</span> de quem já contratou
+          A <span className="text-accent">confiança</span> de quem já opera conosco
         </motion.h2>
         <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Empresas e gestores que comprovaram a qualidade do nosso transporte corporativo.
+          Gestores e empresas que comprovaram a excelência operacional da UseMOB em mobilidade corporativa.
         </motion.p>
       </motion.div>
 
@@ -61,15 +61,15 @@ const Testimonials = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-md hover:border-accent/30 transition-all duration-300"
+            className="bg-card border border-border rounded-xl p-8 hover:shadow-sm transition-all duration-300"
           >
-            <Quote className="text-accent/30 mb-4" size={32} />
+            <Quote className="text-accent/20 mb-4" size={32} />
             <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
               "{t.text}"
             </p>
             <div>
               <p className="font-heading font-bold text-foreground">{t.name}</p>
-              <p className="text-sm text-accent">{t.role}</p>
+              <p className="text-sm text-muted-foreground">{t.role}</p>
             </div>
           </motion.div>
         ))}

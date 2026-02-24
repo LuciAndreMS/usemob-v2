@@ -52,6 +52,7 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         navy: "hsl(var(--navy))",
+        "navy-secondary": "hsl(var(--navy-secondary))",
         charcoal: "hsl(var(--charcoal))",
         "surface-elevated": "hsl(var(--surface-elevated))",
         "accent-hover": "hsl(var(--accent-hover))",

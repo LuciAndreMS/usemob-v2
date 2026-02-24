@@ -12,7 +12,7 @@ const Hero = () => (
         className="w-full h-full object-cover"
         loading="eager"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,25%,8%)] via-[hsl(220,25%,8%,0.85)] to-[hsl(220,25%,8%,0.3)]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/30" />
     </div>
 
     <div className="container relative z-10 pt-24">
@@ -42,14 +42,14 @@ const Hero = () => (
             href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md font-heading font-semibold text-base hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md font-heading font-semibold text-base hover:bg-accent-hover transition-colors shadow-lg shadow-accent/25"
           >
             Solicitar Cotação
             <ArrowRight size={18} />
           </a>
           <a
             href="#servicos"
-            className="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-8 py-4 rounded-md font-heading font-semibold text-base hover:bg-white/10 transition-colors"
+            className="inline-flex items-center justify-center gap-2 border-2 border-accent text-accent px-8 py-4 rounded-md font-heading font-semibold text-base hover:bg-accent hover:text-accent-foreground transition-colors"
           >
             Nossos Serviços
           </a>

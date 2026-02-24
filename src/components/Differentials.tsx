@@ -19,7 +19,7 @@ const fadeUp = {
 };
 
 const Differentials = () => (
-  <section id="diferenciais" className="section-padding bg-background">
+  <section id="diferenciais" className="section-padding bg-navy">
     <div className="container">
       <motion.div
         initial="hidden"
@@ -30,10 +30,10 @@ const Differentials = () => (
         <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
           Diferenciais
         </motion.span>
-        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-foreground">
-          Por que grandes empresas escolhem a UseMOB?
+        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-white">
+          Por que grandes empresas escolhem a <span className="text-accent">UseMOB</span>?
         </motion.h2>
-        <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <motion.p variants={fadeUp} custom={2} className="text-white/60 text-lg max-w-2xl mx-auto">
           Confiança construída com mais de uma década de serviço dedicado ao mercado corporativo.
         </motion.p>
       </motion.div>
@@ -47,14 +47,14 @@ const Differentials = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="flex gap-5"
+            className="flex gap-5 bg-white/5 border border-white/10 rounded-xl p-6 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
           >
             <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
               <item.icon className="text-accent" size={22} />
             </div>
             <div>
-              <h3 className="font-heading font-bold text-base mb-1 text-foreground">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+              <h3 className="font-heading font-bold text-base mb-1 text-white">{item.title}</h3>
+              <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
             </div>
           </motion.div>
         ))}

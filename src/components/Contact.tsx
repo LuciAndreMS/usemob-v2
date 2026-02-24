@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 
 const Contact = () => (
-  <section id="contato" className="section-padding bg-muted">
+  <section id="contato" className="section-padding bg-background">
     <div className="container">
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <motion.div
@@ -15,7 +15,7 @@ const Contact = () => (
             Contato
           </span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-6 text-foreground">
-            Fale com nossa equipe comercial
+            Fale com nossa <span className="text-accent">equipe comercial</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
             Precisa de transporte executivo para sua empresa? Nossa equipe está
@@ -75,19 +75,19 @@ const Contact = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-card border border-border rounded-xl p-8 shadow-sm"
+          className="bg-navy border border-white/10 rounded-xl p-8 shadow-xl"
         >
-          <h3 className="font-heading font-bold text-xl mb-2 text-foreground">
+          <h3 className="font-heading font-bold text-xl mb-2 text-white">
             Solicite sua cotação agora
           </h3>
-          <p className="text-muted-foreground text-sm mb-8">
+          <p className="text-white/60 text-sm mb-8">
             Fale diretamente com nosso time comercial pelo WhatsApp e receba uma proposta personalizada para sua empresa em minutos.
           </p>
           <a
             href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20transporte%20executivo."
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 w-full bg-[hsl(142,70%,40%)] text-white px-6 py-4 rounded-lg font-heading font-semibold hover:opacity-90 transition-opacity"
+            className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4 rounded-lg font-heading font-semibold hover:bg-accent-hover transition-colors shadow-lg shadow-accent/25"
           >
             <MessageCircle size={22} />
             Conversar no WhatsApp

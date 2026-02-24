@@ -56,7 +56,7 @@ const services = [
 ];
 
 const Services = () => (
-  <section id="servicos" className="section-padding bg-muted">
+  <section id="servicos" className="section-padding bg-navy">
     <div className="container">
       <motion.div
         initial="hidden"
@@ -74,14 +74,14 @@ const Services = () => (
         <motion.h2
           variants={fadeUp}
           custom={1}
-          className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-foreground"
+          className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-white"
         >
-          Soluções completas em transporte corporativo
+          Soluções <span className="text-accent">completas</span> em transporte corporativo
         </motion.h2>
         <motion.p
           variants={fadeUp}
           custom={2}
-          className="text-muted-foreground text-lg max-w-2xl mx-auto"
+          className="text-white/60 text-lg max-w-2xl mx-auto"
         >
           Do transporte executivo diário à locação de frota para eventos — atendemos todas as demandas da sua empresa.
         </motion.p>
@@ -96,7 +96,7 @@ const Services = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl overflow-hidden group hover:border-accent/40 hover:shadow-md transition-all duration-300"
+            className="bg-white/5 border border-white/10 rounded-xl overflow-hidden group hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300"
           >
             <div className="h-48 overflow-hidden">
               <img
@@ -110,8 +110,8 @@ const Services = () => (
               <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
                 <s.icon className="text-accent" size={26} />
               </div>
-              <h3 className="font-heading font-bold text-lg mb-3 text-foreground">{s.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <h3 className="font-heading font-bold text-lg mb-3 text-white">{s.title}</h3>
+              <p className="text-white/60 text-sm leading-relaxed">
                 {s.desc}
               </p>
             </div>
@@ -131,7 +131,7 @@ const Services = () => (
           href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20UseMOB."
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-semibold hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md font-heading font-semibold hover:bg-accent-hover transition-colors shadow-lg shadow-accent/25"
         >
           Solicitar cotação para sua empresa
           <ArrowRight size={18} />

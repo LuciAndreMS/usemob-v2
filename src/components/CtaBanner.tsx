@@ -12,10 +12,10 @@ const CtaBanner = () => (
         className="text-center"
       >
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
-          Solicite uma cotação agora!
+          Sua empresa merece um transporte à altura
         </h2>
         <p className="text-primary-foreground/80 text-lg mb-8 max-w-lg mx-auto">
-          Iremos apresentar uma proposta atrativa de mobilidade, rapidez e segurança para a sua empresa.
+          Solicite agora uma cotação personalizada e descubra como reduzir custos com transporte executivo corporativo de alto padrão.
         </p>
         <a
           href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o."

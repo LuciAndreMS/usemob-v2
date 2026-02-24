@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Car, Plane, Heart, Package, Bus, Bike } from "lucide-react";
+import { Car, Plane, Heart, Package, Bus, Bike, ArrowRight } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -14,12 +14,12 @@ const services = [
   {
     icon: Car,
     title: "Transporte Executivo Corporativo",
-    desc: "Atendimento exclusivo, pontualidade e discrição para empresas e executivos que demandam alto padrão.",
+    desc: "Atendimento exclusivo com motoristas profissionais, pontualidade e discrição para executivos e viagens de negócios.",
   },
   {
     icon: Plane,
     title: "Traslados de Aeroporto",
-    desc: "Recepção e transporte para aeroportos com conforto, flexibilidade de destino e veículos sedan ou van.",
+    desc: "Transfer corporativo com monitoramento de voo, recepção personalizada e frota sedan ou van para sua equipe.",
   },
   {
     icon: Heart,
@@ -34,7 +34,7 @@ const services = [
   {
     icon: Bus,
     title: "Locação de Van para Viagens e Eventos",
-    desc: "Ideal para grupos em congressos, feiras e viagens corporativas com total conforto.",
+    desc: "Locação de frota com motorista para congressos, feiras, eventos corporativos e viagens empresariais.",
   },
   {
     icon: Bike,
@@ -62,10 +62,17 @@ const Services = () => (
         <motion.h2
           variants={fadeUp}
           custom={1}
-          className="text-3xl md:text-4xl font-heading font-bold mt-4 text-foreground"
+          className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-foreground"
         >
-          Soluções completas em transporte
+          Soluções completas em transporte corporativo
         </motion.h2>
+        <motion.p
+          variants={fadeUp}
+          custom={2}
+          className="text-muted-foreground text-lg max-w-2xl mx-auto"
+        >
+          Do transporte executivo diário à locação de frota para eventos — atendemos todas as demandas da sua empresa.
+        </motion.p>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -89,6 +96,25 @@ const Services = () => (
           </motion.div>
         ))}
       </div>
+
+      {/* Secondary CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-center mt-14"
+      >
+        <a
+          href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20UseMOB."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-heading font-semibold hover:opacity-90 transition-opacity"
+        >
+          Solicitar cotação para sua empresa
+          <ArrowRight size={18} />
+        </a>
+      </motion.div>
     </div>
   </section>
 );

@@ -30,9 +30,12 @@ const Differentials = () => (
         <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
           Diferenciais
         </motion.span>
-        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 text-foreground">
-          Por que escolher a UseMOB?
+        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-foreground">
+          Por que grandes empresas escolhem a UseMOB?
         </motion.h2>
+        <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          Confiança construída com mais de uma década de serviço dedicado ao mercado corporativo.
+        </motion.p>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">

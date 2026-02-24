@@ -33,7 +33,7 @@ const fadeUp = {
 };
 
 const Testimonials = () => (
-  <section id="depoimentos" className="section-padding bg-secondary">
+  <section id="depoimentos" className="section-padding bg-muted">
     <div className="container">
       <motion.div
         initial="hidden"
@@ -41,10 +41,10 @@ const Testimonials = () => (
         viewport={{ once: true, margin: "-100px" }}
         className="text-center mb-16"
       >
-        <motion.span variants={fadeUp} custom={0} className="text-primary font-heading text-sm font-semibold tracking-widest uppercase">
+        <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
           Depoimentos
         </motion.span>
-        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4">
+        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 text-foreground">
           O que nossos clientes dizem
         </motion.h2>
       </motion.div>
@@ -58,14 +58,14 @@ const Testimonials = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl p-8"
+            className="bg-card border border-border rounded-xl p-8 shadow-sm"
           >
-            <Quote className="text-primary/30 mb-4" size={32} />
+            <Quote className="text-accent/30 mb-4" size={32} />
             <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
               "{t.text}"
             </p>
             <div>
-              <p className="font-heading font-bold">{t.name}</p>
+              <p className="font-heading font-bold text-foreground">{t.name}</p>
               <p className="text-sm text-muted-foreground">{t.role}</p>
             </div>
           </motion.div>

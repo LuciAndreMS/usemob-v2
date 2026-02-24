@@ -15,11 +15,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#inicio" className="flex items-center gap-2">
-          <span className="font-heading text-2xl font-bold tracking-tight">
-            Use<span className="text-primary">MOB</span>
+          <span className="font-heading text-2xl font-bold tracking-tight text-primary">
+            Use<span className="text-accent">MOB</span>
           </span>
         </a>
 
@@ -29,7 +29,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium"
             >
               {l.label}
             </a>
@@ -61,7 +61,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+            className="md:hidden bg-white border-b border-border overflow-hidden"
           >
             <div className="container py-4 flex flex-col gap-4">
               {links.map((l) => (
@@ -69,7 +69,7 @@ const Navbar = () => {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium"
                 >
                   {l.label}
                 </a>

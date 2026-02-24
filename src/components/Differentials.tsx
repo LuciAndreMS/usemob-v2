@@ -27,10 +27,10 @@ const Differentials = () => (
         viewport={{ once: true, margin: "-100px" }}
         className="text-center mb-16"
       >
-        <motion.span variants={fadeUp} custom={0} className="text-primary font-heading text-sm font-semibold tracking-widest uppercase">
+        <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
           Diferenciais
         </motion.span>
-        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4">
+        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 text-foreground">
           Por que escolher a UseMOB?
         </motion.h2>
       </motion.div>
@@ -46,11 +46,11 @@ const Differentials = () => (
             variants={fadeUp}
             className="flex gap-5"
           >
-            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-              <item.icon className="text-primary" size={22} />
+            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+              <item.icon className="text-accent" size={22} />
             </div>
             <div>
-              <h3 className="font-heading font-bold text-base mb-1">{item.title}</h3>
+              <h3 className="font-heading font-bold text-base mb-1 text-foreground">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
             </div>
           </motion.div>

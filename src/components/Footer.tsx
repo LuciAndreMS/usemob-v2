@@ -1,21 +1,21 @@
 const Footer = () => (
-  <footer className="border-t border-border py-10 bg-background">
+  <footer className="border-t border-border py-10 bg-primary text-primary-foreground">
     <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
       <p className="font-heading text-lg font-bold">
-        Use<span className="text-primary">MOB</span>
+        Use<span className="text-accent">MOB</span>
       </p>
-      <p className="text-muted-foreground text-sm text-center">
+      <p className="text-primary-foreground/70 text-sm text-center">
         © {new Date().getFullYear()} UseMOB Transportes. Todos os direitos reservados.
       </p>
       <div className="flex gap-6">
-        <a href="mailto:contato@usemob.com.br" className="text-muted-foreground text-sm hover:text-foreground transition-colors">
+        <a href="mailto:contato@usemob.com.br" className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors">
           Email
         </a>
         <a
           href="https://api.whatsapp.com/send?phone=5567999636464"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground text-sm hover:text-foreground transition-colors"
+          className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors"
         >
           WhatsApp
         </a>

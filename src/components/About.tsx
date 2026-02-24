@@ -40,14 +40,14 @@ const About = () => (
         <motion.span
           variants={fadeUp}
           custom={0}
-          className="text-primary font-heading text-sm font-semibold tracking-widest uppercase"
+          className="text-accent font-heading text-sm font-semibold tracking-widest uppercase"
         >
           Quem Somos
         </motion.span>
         <motion.h2
           variants={fadeUp}
           custom={1}
-          className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-6"
+          className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-6 text-foreground"
         >
           Especialistas em Mobilidade Corporativa
         </motion.h2>
@@ -64,7 +64,7 @@ const About = () => (
         </motion.p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-8">
         {pillars.map((p, i) => (
           <motion.div
             key={p.title}
@@ -73,12 +73,12 @@ const About = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl p-8 hover:border-primary/30 transition-colors"
+            className="bg-card border border-border rounded-xl p-8 hover:border-accent/40 hover:shadow-md transition-all duration-300"
           >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
-              <p.icon className="text-primary" size={22} />
+            <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
+              <p.icon className="text-accent" size={22} />
             </div>
-            <h3 className="font-heading font-bold text-xl mb-3">{p.title}</h3>
+            <h3 className="font-heading font-bold text-xl mb-3 text-foreground">{p.title}</h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
               {p.text}
             </p>

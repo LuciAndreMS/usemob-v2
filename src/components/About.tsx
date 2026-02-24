@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Shield, Clock, Award } from "lucide-react";
+import aboutMission from "@/assets/about-mission.jpg";
+import aboutVision from "@/assets/about-vision.jpg";
+import aboutPlan from "@/assets/about-plan.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -15,16 +18,19 @@ const pillars = [
     icon: Shield,
     title: "Nossa Missão",
     text: "Prestar serviços de transporte com excelência e responsabilidade, conquistando a confiança de nossos clientes através da ética, pontualidade e comprometimento.",
+    image: aboutMission,
   },
   {
     icon: Clock,
     title: "Nossa Visão",
     text: "Ser referência em mobilidade corporativa, superando expectativas ao oferecer segurança, agilidade e atendimento personalizado.",
+    image: aboutVision,
   },
   {
     icon: Award,
     title: "Nossos Valores",
     text: "Honestidade, credibilidade, pontualidade, comprometimento, responsabilidade, transparência e respeito a clientes, parceiros e colaboradores.",
+    image: aboutPlan,
   },
 ];
 
@@ -72,15 +78,25 @@ const About = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl p-8 hover:border-accent/40 hover:shadow-md transition-all duration-300"
+            className="bg-card border border-border rounded-xl overflow-hidden hover:border-accent/40 hover:shadow-md transition-all duration-300"
           >
-            <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
-              <p.icon className="text-accent" size={22} />
+            <div className="h-48 overflow-hidden">
+              <img
+                src={p.image}
+                alt={p.title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
-            <h3 className="font-heading font-bold text-xl mb-3 text-foreground">{p.title}</h3>
-            <p className="text-muted-foreground leading-relaxed text-sm">
-              {p.text}
-            </p>
+            <div className="p-8">
+              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-5">
+                <p.icon className="text-accent" size={22} />
+              </div>
+              <h3 className="font-heading font-bold text-xl mb-3 text-foreground">{p.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {p.text}
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>

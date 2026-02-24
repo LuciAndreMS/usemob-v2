@@ -23,19 +23,18 @@ const Hero = () => (
         className="max-w-2xl"
       >
         <span className="inline-block text-accent font-heading text-sm font-semibold tracking-widest uppercase mb-6">
-          Mobilidade Corporativa
+          Transporte Executivo Corporativo
         </span>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-[1.1] mb-6 text-white">
-          Descubra um novo conceito em{" "}
-          <span className="text-accent">mobilidade</span>{" "}
-          corporativa
+          A mobilidade corporativa que sua empresa precisa —{" "}
+          <span className="text-accent">segura, pontual e sob medida</span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/70 mb-10 max-w-lg leading-relaxed">
-          Soluções em transporte corporativo com foco em praticidade, economia e
-          agilidade. Reduza custos operacionais com um serviço sob medida para
-          sua empresa.
+          Frota rastreada, motoristas profissionais e atendimento dedicado.
+          Reduza custos operacionais com transporte executivo pensado para
+          o dia a dia da sua empresa.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">

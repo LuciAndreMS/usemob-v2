@@ -44,9 +44,12 @@ const Testimonials = () => (
         <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
           Depoimentos
         </motion.span>
-        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 text-foreground">
-          O que nossos clientes dizem
+        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-foreground">
+          A confiança de quem já contratou
         </motion.h2>
+        <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          Empresas e gestores que comprovaram a qualidade do nosso transporte corporativo.
+        </motion.p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-6">

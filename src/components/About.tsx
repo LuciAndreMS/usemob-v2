@@ -49,7 +49,7 @@ const About = () => (
           custom={1}
           className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-6 text-foreground"
         >
-          Especialistas em Mobilidade Corporativa
+          Mais de 10 anos de excelência em transporte corporativo
         </motion.h2>
         <motion.p
           variants={fadeUp}
@@ -57,10 +57,9 @@ const About = () => (
           className="text-muted-foreground text-lg leading-relaxed"
         >
           A UseMOB é especializada na locação de veículos com motorista para
-          empresas. Trabalhamos com atendimento personalizado, focado na
-          pontualidade, segurança e excelência em cada detalhe. Nossos
-          motoristas são criteriosamente selecionados para garantir um serviço
-          de alto padrão.
+          empresas. Nosso atendimento personalizado garante pontualidade,
+          segurança e motoristas profissionais criteriosamente selecionados —
+          tudo para que sua operação logística funcione com máxima eficiência.
         </motion.p>
       </motion.div>
 

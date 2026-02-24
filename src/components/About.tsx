@@ -55,7 +55,7 @@ const About = () => (
           custom={1}
           className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-6 text-foreground"
         >
-          Mais de 10 anos de excelência em transporte corporativo
+          Mais de 10 anos de <span className="text-accent">excelência</span> em transporte corporativo
         </motion.h2>
         <motion.p
           variants={fadeUp}
@@ -78,7 +78,7 @@ const About = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl overflow-hidden hover:border-accent/40 hover:shadow-md transition-all duration-300"
+            className="bg-card border border-border rounded-xl overflow-hidden hover:border-accent/40 hover:shadow-lg transition-all duration-300"
           >
             <div className="h-48 overflow-hidden">
               <img

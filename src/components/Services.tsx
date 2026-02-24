@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 import { Car, Plane, Heart, Package, Bus, Bike, ArrowRight } from "lucide-react";
+import serv01 from "@/assets/serv01.jpg";
+import serv02 from "@/assets/serv02.jpg";
+import serv03 from "@/assets/serv03.jpg";
+import serv04 from "@/assets/serv04.jpg";
+import serv05 from "@/assets/serv05.jpg";
+import serv06 from "@/assets/serv06.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -15,31 +21,37 @@ const services = [
     icon: Car,
     title: "Transporte Executivo Corporativo",
     desc: "Atendimento exclusivo com motoristas profissionais, pontualidade e discrição para executivos e viagens de negócios.",
+    image: serv01,
   },
   {
     icon: Plane,
     title: "Traslados de Aeroporto",
     desc: "Transfer corporativo com monitoramento de voo, recepção personalizada e frota sedan ou van para sua equipe.",
+    image: serv02,
   },
   {
     icon: Heart,
     title: "Transporte para Noivas e Debutantes",
     desc: "Elegância, pontualidade e atenção aos detalhes para ocasiões inesquecíveis e celebrações especiais.",
+    image: serv03,
   },
   {
     icon: Package,
     title: "Transporte Rápido de Encomendas",
     desc: "Agilidade e eficiência em coletas e entregas através de veículos utilitários dedicados.",
+    image: serv04,
   },
   {
     icon: Bus,
     title: "Locação de Van para Viagens e Eventos",
     desc: "Locação de frota com motorista para congressos, feiras, eventos corporativos e viagens empresariais.",
+    image: serv05,
   },
   {
     icon: Bike,
     title: "Transporte de Documentos (Motoboy)",
     desc: "Solução rápida e confiável para entregas expressas de documentos empresariais.",
+    image: serv06,
   },
 ];
 
@@ -84,15 +96,25 @@ const Services = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl p-8 group hover:border-accent/40 hover:shadow-md transition-all duration-300"
+            className="bg-card border border-border rounded-xl overflow-hidden group hover:border-accent/40 hover:shadow-md transition-all duration-300"
           >
-            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-              <s.icon className="text-accent" size={26} />
+            <div className="h-48 overflow-hidden">
+              <img
+                src={s.image}
+                alt={s.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
             </div>
-            <h3 className="font-heading font-bold text-lg mb-3 text-foreground">{s.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              {s.desc}
-            </p>
+            <div className="p-8">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                <s.icon className="text-accent" size={26} />
+              </div>
+              <h3 className="font-heading font-bold text-lg mb-3 text-foreground">{s.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {s.desc}
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>

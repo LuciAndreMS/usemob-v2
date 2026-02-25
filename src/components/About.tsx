@@ -41,7 +41,7 @@ const About = () => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="max-w-3xl mx-auto text-center mb-16"
+        className="max-w-3xl mx-auto text-center mb-12"
       >
         <motion.span
           variants={fadeUp}
@@ -69,7 +69,7 @@ const About = () => (
         </motion.p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-3 gap-6 md:gap-8">
         {pillars.map((p, i) => (
           <motion.div
             key={p.title}

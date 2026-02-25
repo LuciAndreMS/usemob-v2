@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => (
@@ -40,21 +40,28 @@ const Hero = () => (
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa."
+              href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md font-heading font-semibold text-base hover:bg-accent-hover transition-colors shadow-lg shadow-accent/20"
             >
-              Solicitar Proposta Corporativa
+              Solicitar Cotação Corporativa
               <ArrowRight size={18} />
             </a>
             <a
-              href="#servicos"
+              href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20transporte%20corporativo."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white/80 px-8 py-4 rounded-md font-heading font-semibold text-base hover:border-accent hover:text-accent transition-colors"
             >
-              Conheça Nossos Serviços
+              <MessageCircle size={18} />
+              Falar no WhatsApp
             </a>
           </div>
+
+          <p className="mt-6 text-white/40 text-sm font-medium tracking-wide">
+            Atendimento corporativo • Segurança • Pontualidade
+          </p>
         </motion.div>
       </div>
     </div>

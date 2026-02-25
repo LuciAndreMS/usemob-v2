@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { ShieldCheck, Users, MapPin, Headphones, CarFront, BadgeCheck } from "lucide-react";
 
 const items = [
-  { icon: ShieldCheck, title: "Governança e Compliance", desc: "Frota rastreada, segurada e com documentação em conformidade. Processos alinhados à governança corporativa." },
-  { icon: Users, title: "Capital Humano Qualificado", desc: "Motoristas criteriosamente selecionados, treinados e com avaliação contínua de desempenho." },
-  { icon: MapPin, title: "Cobertura Estratégica", desc: "Operação estruturada em Três Lagoas-MS com expansão regional para atender grandes operações." },
-  { icon: Headphones, title: "Gestão de Conta Dedicada", desc: "Equipe comercial exclusiva para cada contrato corporativo. Suporte ágil e personalizado." },
-  { icon: CarFront, title: "Frota Padronizada", desc: "Veículos de última geração, higienizados e com manutenção preventiva rigorosa." },
-  { icon: BadgeCheck, title: "Parceria de Longo Prazo", desc: "Mais de 10 anos atendendo grandes empresas com contratos contínuos e confiança comprovada." },
+  { icon: ShieldCheck, title: "Governança e Compliance", desc: "Gestão profissional de mobilidade corporativa com frota rastreada, segurada e em total conformidade documental e regulatória." },
+  { icon: Users, title: "Motoristas Treinados e Uniformizados", desc: "Equipe de condutores criteriosamente selecionados, com treinamento contínuo, postura profissional e avaliação permanente de desempenho." },
+  { icon: MapPin, title: "Cobertura Estratégica Regional", desc: "Operação estruturada em Três Lagoas-MS com cobertura em todo o estado de Mato Grosso do Sul, atendendo grandes operações industriais e corporativas." },
+  { icon: Headphones, title: "Atendimento Dedicado para Empresas", desc: "Gestão de conta exclusiva para cada contrato corporativo, com suporte ágil, relatórios operacionais e comunicação direta com a equipe comercial." },
+  { icon: CarFront, title: "Frota Executiva com Padrão Elevado", desc: "Veículos de última geração, padronizados, higienizados e com programa rigoroso de manutenção preventiva e corretiva." },
+  { icon: BadgeCheck, title: "Pontualidade e Controle Operacional", desc: "Mais de 10 anos de operação ininterrupta com indicadores de pontualidade acima de 99% e controle total de cada deslocamento." },
 ];
 
 const fadeUp = {
@@ -25,7 +25,7 @@ const Differentials = () => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center mb-16"
+        className="text-center mb-12"
       >
         <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
           Diferenciais
@@ -33,12 +33,12 @@ const Differentials = () => (
         <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-white">
           Por que grandes empresas <span className="text-accent">confiam</span> na UseMOB
         </motion.h2>
-        <motion.p variants={fadeUp} custom={2} className="text-white/50 text-lg max-w-2xl mx-auto">
-          Estrutura operacional sólida construída ao longo de mais de uma década de serviço dedicado ao mercado corporativo.
+        <motion.p variants={fadeUp} custom={2} className="text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          Estrutura operacional sólida construída ao longo de mais de uma década de serviço dedicado ao transporte corporativo em Três Lagoas e região.
         </motion.p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {items.map((item, i) => (
           <motion.div
             key={item.title}
@@ -53,7 +53,7 @@ const Differentials = () => (
               <item.icon className="text-accent" size={22} />
             </div>
             <div>
-              <h3 className="font-heading font-bold text-base mb-1 text-white">{item.title}</h3>
+              <h3 className="font-heading font-bold text-base mb-2 text-white">{item.title}</h3>
               <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
             </div>
           </motion.div>

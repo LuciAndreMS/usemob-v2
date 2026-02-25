@@ -26,7 +26,7 @@ const VehicleShowcase = () => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center mb-14"
+        className="text-center mb-12"
       >
         <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
           Nossa Frota
@@ -39,7 +39,7 @@ const VehicleShowcase = () => (
         </motion.p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         {vehicles.map((v, i) => (
           <motion.div
             key={v.label}

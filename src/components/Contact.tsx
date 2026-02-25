@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 
 const Contact = () => (
   <section id="contato" className="section-padding bg-navy">
-    <div className="container">
+    <div className="section-container">
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

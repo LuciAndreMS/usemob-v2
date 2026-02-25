@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-navy/30">
-      <div className="container flex items-center justify-between h-16 md:h-20">
+      <div className="section-container flex items-center justify-between h-16 md:h-20">
         <a href="#inicio" className="flex items-center">
           <img src={logo} alt="UseMOB - Mobilidade Corporativa" className="h-10 md:h-12 w-auto" />
         </a>
@@ -62,7 +62,7 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-navy border-b border-white/5 overflow-hidden"
           >
-            <div className="container py-4 flex flex-col gap-4">
+            <div className="section-container py-4 flex flex-col gap-4">
               {links.map((l) => (
                 <a
                   key={l.href}

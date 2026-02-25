@@ -20,7 +20,7 @@ const fadeUp = {
 
 const Differentials = () => (
   <section id="diferenciais" className="section-padding bg-navy-secondary">
-    <div className="container">
+    <div className="section-container">
       <motion.div
         initial="hidden"
         whileInView="visible"

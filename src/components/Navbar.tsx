@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const links = [
   { label: "Início", href: "#inicio" },
@@ -17,10 +18,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-navy/30">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#inicio" className="flex items-center gap-2">
-          <span className="font-heading text-2xl font-bold tracking-tight text-white">
-            Use<span className="text-accent">MOB</span>
-          </span>
+        <a href="#inicio" className="flex items-center">
+          <img src={logo} alt="UseMOB - Mobilidade Corporativa" className="h-10 md:h-12 w-auto" />
         </a>
 
         {/* Desktop */}

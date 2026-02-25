@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Building2, Clock, Users, TrendingUp } from "lucide-react";
+import { Building2, Clock, Users, TrendingUp, MapPin } from "lucide-react";
 
 const stats = [
   { icon: TrendingUp, value: "10+", label: "Anos de Operação" },
   { icon: Building2, value: "500+", label: "Empresas Atendidas" },
   { icon: Users, value: "50+", label: "Motoristas Profissionais" },
   { icon: Clock, value: "24/7", label: "Operação Ininterrupta" },
+  { icon: MapPin, value: "MS", label: "Cobertura Estadual" },
 ];
 
 const AuthorityBar = () => (
@@ -16,7 +17,7 @@ const AuthorityBar = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10"
       >
         {stats.map((stat, i) => (
           <motion.div

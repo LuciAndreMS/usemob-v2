@@ -62,7 +62,7 @@ const Services = () => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center mb-16"
+        className="text-center mb-12"
       >
         <motion.span
           variants={fadeUp}
@@ -87,7 +87,7 @@ const Services = () => (
         </motion.p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {services.map((s, i) => (
           <motion.div
             key={s.title}
@@ -96,7 +96,7 @@ const Services = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-white/[0.03] border border-white/8 rounded-xl overflow-hidden group hover:border-accent/30 transition-all duration-300"
+            className="bg-white/[0.03] border border-white/8 rounded-xl overflow-hidden group hover:border-accent/30 transition-all duration-300 flex flex-col"
           >
             <div className="h-48 overflow-hidden">
               <img
@@ -106,12 +106,12 @@ const Services = () => (
                 loading="lazy"
               />
             </div>
-            <div className="p-8">
-              <div className="w-14 h-14 rounded-xl bg-accent/8 flex items-center justify-center mb-6 group-hover:bg-accent/15 transition-colors">
-                <s.icon className="text-accent" size={26} />
+            <div className="p-6 flex flex-col flex-1">
+              <div className="w-12 h-12 rounded-lg bg-accent/8 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors">
+                <s.icon className="text-accent" size={24} />
               </div>
-              <h3 className="font-heading font-bold text-lg mb-3 text-white">{s.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">
+              <h3 className="font-heading font-bold text-base mb-2 text-white">{s.title}</h3>
+              <p className="text-white/50 text-sm leading-relaxed flex-1">
                 {s.desc}
               </p>
             </div>

@@ -39,7 +39,7 @@ const Testimonials = () => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center mb-16"
+        className="text-center mb-12"
       >
         <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
           Depoimentos
@@ -52,7 +52,7 @@ const Testimonials = () => (
         </motion.p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-8">
         {testimonials.map((t, i) => (
           <motion.div
             key={t.name}

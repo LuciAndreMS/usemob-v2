@@ -1,6 +1,6 @@
 const Footer = () => (
   <footer className="border-t border-white/5 py-10 bg-navy text-white">
-    <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
+    <div className="section-container flex flex-col md:flex-row items-center justify-between gap-4">
       <p className="font-heading text-lg font-bold">
         Use<span className="text-accent">MOB</span>
       </p>

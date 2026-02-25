@@ -36,7 +36,7 @@ const pillars = [
 
 const About = () => (
   <section id="quem-somos" className="section-padding bg-background">
-    <div className="container">
+    <div className="section-container">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -83,7 +83,7 @@ const About = () => (
             <div className="h-48 overflow-hidden">
               <img
                 src={p.image}
-                alt={p.title}
+                alt={`${p.title} - mobilidade corporativa em Três Lagoas`}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

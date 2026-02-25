@@ -10,7 +10,7 @@ const stats = [
 
 const AuthorityBar = () => (
   <section className="py-16 bg-navy-secondary border-y border-white/5">
-    <div className="container">
+    <div className="section-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

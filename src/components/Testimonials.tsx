@@ -34,7 +34,7 @@ const fadeUp = {
 
 const Testimonials = () => (
   <section id="depoimentos" className="section-padding bg-background">
-    <div className="container">
+    <div className="section-container">
       <motion.div
         initial="hidden"
         whileInView="visible"

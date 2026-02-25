@@ -57,7 +57,7 @@ const services = [
 
 const Services = () => (
   <section id="servicos" className="section-padding bg-navy">
-    <div className="container">
+    <div className="section-container">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -101,7 +101,7 @@ const Services = () => (
             <div className="h-48 overflow-hidden">
               <img
                 src={s.image}
-                alt={s.title}
+                alt={`${s.title} - transporte corporativo em Três Lagoas MS`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />

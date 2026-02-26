@@ -12,16 +12,17 @@ const partners = [
 ];
 
 const PartnerLogos = () => (
-  <section className="py-16 bg-background border-y border-border/40">
+  <section className="py-16 bg-background border-y border-border/60">
     <div className="section-container">
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="text-center text-muted-foreground text-xs font-heading font-semibold tracking-[0.25em] uppercase mb-10"
+        className="text-center text-muted-foreground text-xs font-semibold tracking-[0.25em] uppercase mb-10"
       >
-        Empresas que confiam na UseMOB para sua mobilidade corporativa
+        Empresas e operações que confiam na UseMOB para mobilidade corporativa
       </motion.p>
+
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -32,12 +33,16 @@ const PartnerLogos = () => (
         {partners.map((name) => (
           <span
             key={name}
-            className="text-muted-foreground/35 font-heading font-bold text-lg md:text-xl tracking-wide select-none hover:text-accent transition-colors duration-300"
+            className="text-foreground/70 font-heading font-bold text-lg md:text-xl tracking-wide select-none hover:text-accent transition-colors duration-300"
           >
             {name}
           </span>
         ))}
       </motion.div>
+
+      <p className="text-center text-muted-foreground text-xs mt-10">
+        *Exemplos de segmentos e operações atendidas. Marcas citadas apenas como referência.
+      </p>
     </div>
   </section>
 );

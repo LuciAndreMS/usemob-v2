@@ -1,5 +1,3 @@
-SERVICES
-
 import { motion } from "framer-motion";
 import { Car, Plane, Heart, Package, Bus, Bike, ArrowRight } from "lucide-react";
 import serv01 from "@/assets/serv01.jpg";

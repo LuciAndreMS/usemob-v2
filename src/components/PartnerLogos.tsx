@@ -109,9 +109,7 @@ const PartnerLogos = () => (
         ))}
       </motion.div>
 
-      <p className="text-center text-white/35 text-xs mt-10">
-        *Se você desejar, podemos substituir “setores” por logos de empresas (com autorização/uso permitido).
-      </p>
+     
     </div>
   </section>
 );

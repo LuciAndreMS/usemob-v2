@@ -1,5 +1,3 @@
-AUTHORITIBAR
-
 const stats = [
   { icon: TrendingUp, value: "Desde 2017", label: "Operação Contínua", sub: "Mais de 8 anos no mercado" },
   { icon: Building2, value: "500+", label: "Clientes Corporativos", sub: "Empresas de médio e grande porte" },

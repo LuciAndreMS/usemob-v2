@@ -5,10 +5,10 @@ import carousel4 from "@/assets/carousel-4.jpg";
 import carousel5 from "@/assets/carousel-5.jpg";
 
 const vehicles = [
-  { image: carousel2, alt: "Sedan executivo para transporte corporativo em Três Lagoas", label: "Sedan Executivo", desc: "Conforto e discrição para deslocamentos de diretoria" },
-  { image: carousel3, alt: "Van corporativa para transporte de equipes em Mato Grosso do Sul", label: "Van Corporativa", desc: "Capacidade para equipes e grupos empresariais" },
-  { image: carousel4, alt: "Frota de veículos executivos UseMOB para mobilidade empresarial", label: "Frota Premium", desc: "Veículos de última geração com manutenção rigorosa" },
-  { image: carousel5, alt: "Veículo utilitário para logística de encomendas corporativas", label: "Utilitário Dedicado", desc: "Operação logística ágil e rastreada" },
+  { image: carousel2, alt: "Sedan executivo para transporte corporativo em Três Lagoas", label: "Sedan Executivo", desc: "Conforto e discrição para deslocamentos de diretoria e executivos" },
+  { image: carousel3, alt: "Van corporativa para transporte de equipes em Mato Grosso do Sul", label: "Van Corporativa", desc: "Capacidade para equipes, grupos empresariais e operações de campo" },
+  { image: carousel4, alt: "Frota de veículos executivos UseMOB para mobilidade empresarial", label: "Frota Premium", desc: "Veículos de última geração com manutenção preventiva rigorosa" },
+  { image: carousel5, alt: "Veículo utilitário para logística corporativa em Três Lagoas", label: "Utilitário Dedicado", desc: "Operação logística ágil com rastreamento e controle em tempo real" },
 ];
 
 const fadeUp = {
@@ -35,7 +35,7 @@ const VehicleShowcase = () => (
           Veículos <span className="text-accent">padronizados</span> para operações corporativas
         </motion.h2>
         <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-          Frota completa, higienizada e com manutenção preventiva rigorosa — pronta para atender operações de qualquer escala.
+          Frota completa, higienizada e com manutenção preventiva rigorosa — dimensionada para atender operações corporativas de qualquer escala com segurança e conforto.
         </motion.p>
       </motion.div>
 
@@ -48,7 +48,7 @@ const VehicleShowcase = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="group rounded-xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-lg transition-all duration-300"
+            className="group rounded-xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-xl transition-all duration-300"
           >
             <div className="h-56 overflow-hidden">
               <img
@@ -59,8 +59,8 @@ const VehicleShowcase = () => (
               />
             </div>
             <div className="p-6">
-              <h3 className="font-heading font-bold text-foreground mb-1">{v.label}</h3>
-              <p className="text-muted-foreground text-sm">{v.desc}</p>
+              <h3 className="font-heading font-bold text-foreground mb-1.5">{v.label}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{v.desc}</p>
             </div>
           </motion.div>
         ))}

@@ -17,19 +17,19 @@ const pillars = [
   {
     icon: Shield,
     title: "Nossa Missão",
-    text: "Oferecer soluções de mobilidade corporativa com excelência operacional, conquistando a confiança de nossos clientes por meio de governança, pontualidade e comprometimento institucional.",
+    text: "Entregar soluções de mobilidade corporativa que garantam eficiência operacional, redução de custos logísticos e total conformidade regulatória — consolidando parcerias de longo prazo com empresas que exigem governança em cada deslocamento.",
     image: aboutMission,
   },
   {
     icon: Clock,
     title: "Nossa Visão",
-    text: "Ser a referência nacional em mobilidade corporativa, superando expectativas através de processos estruturados, segurança e atendimento estratégico.",
+    text: "Ser a referência em gestão de mobilidade corporativa no Brasil, reconhecida por processos estruturados, controle operacional rigoroso e capacidade de atender operações de qualquer escala com excelência e segurança.",
     image: aboutVision,
   },
   {
     icon: Award,
     title: "Nossos Valores",
-    text: "Integridade, credibilidade, pontualidade, comprometimento, responsabilidade, transparência e respeito a clientes, parceiros e colaboradores.",
+    text: "Integridade institucional, confiabilidade operacional, pontualidade absoluta, comprometimento com resultados, transparência na gestão e respeito a clientes, parceiros e colaboradores em cada etapa da operação.",
     image: aboutPlan,
   },
 ];
@@ -55,17 +55,18 @@ const About = () => (
           custom={1}
           className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-6 text-foreground leading-tight"
         >
-          Mais de uma década de <span className="text-accent">confiança</span> no mercado corporativo
+          Parceira estratégica em <span className="text-accent">mobilidade corporativa</span> desde 2017
         </motion.h2>
         <motion.p
           variants={fadeUp}
           custom={2}
           className="text-muted-foreground text-lg leading-relaxed"
         >
-          A UseMOB é especializada em gestão de mobilidade corporativa com
-          motoristas profissionais. Nossa operação garante governança, controle
-          de custos e eficiência logística — atendendo grandes empresas que
-          demandam excelência em cada deslocamento.
+          A UseMOB é especializada em gestão completa de mobilidade corporativa
+          com motoristas profissionais. Nossa operação garante governança,
+          controle de custos e eficiência logística — atendendo grandes empresas
+          que demandam confiabilidade e excelência em cada deslocamento no
+          transporte executivo em Três Lagoas e região.
         </motion.p>
       </motion.div>
 
@@ -78,12 +79,12 @@ const About = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
+            className="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
           >
             <div className="h-52 overflow-hidden">
               <img
                 src={p.image}
-                alt={`${p.title} - mobilidade corporativa em Três Lagoas`}
+                alt={`${p.title} - gestão de mobilidade corporativa em Três Lagoas`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />

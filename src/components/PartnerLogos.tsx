@@ -12,15 +12,15 @@ const partners = [
 ];
 
 const PartnerLogos = () => (
-  <section className="py-16 bg-background border-y border-border/50">
+  <section className="py-16 bg-background border-y border-border/40">
     <div className="section-container">
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="text-center text-muted-foreground text-xs font-heading font-semibold tracking-[0.2em] uppercase mb-10"
+        className="text-center text-muted-foreground text-xs font-heading font-semibold tracking-[0.25em] uppercase mb-10"
       >
-        Empresas que confiam na UseMOB
+        Empresas que confiam na UseMOB para sua mobilidade corporativa
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 15 }}
@@ -32,7 +32,7 @@ const PartnerLogos = () => (
         {partners.map((name) => (
           <span
             key={name}
-            className="text-muted-foreground/40 font-heading font-bold text-lg md:text-xl tracking-wide select-none hover:text-accent transition-colors duration-300"
+            className="text-muted-foreground/35 font-heading font-bold text-lg md:text-xl tracking-wide select-none hover:text-accent transition-colors duration-300"
           >
             {name}
           </span>

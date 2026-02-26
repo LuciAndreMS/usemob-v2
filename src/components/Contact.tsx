@@ -12,14 +12,13 @@ const Contact = () => (
           transition={{ duration: 0.6 }}
         >
           <span className="text-accent font-heading text-xs font-semibold tracking-[0.2em] uppercase">
-            Contato
+            Contato Corporativo
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-6 text-white leading-tight">
-            Fale com nossa <span className="text-accent">equipe comercial</span>
+            Fale com nosso <span className="text-accent">time de consultores</span>
           </h2>
-          <p className="text-white/50 text-lg mb-10 leading-relaxed">
-            Apresentamos soluções sob medida para a operação da sua empresa.
-            Entre em contato e receba uma proposta corporativa personalizada.
+          <p className="text-white/45 text-lg mb-10 leading-relaxed">
+            Desenvolvemos soluções de mobilidade corporativa sob medida para a operação da sua empresa. Entre em contato com nossa equipe comercial e receba uma proposta corporativa personalizada para transporte executivo em Três Lagoas e Mato Grosso do Sul.
           </p>
 
           <div className="space-y-7">
@@ -29,7 +28,7 @@ const Contact = () => (
               </div>
               <div>
                 <p className="font-heading font-semibold text-sm mb-1 text-white">Sede Operacional</p>
-                <p className="text-white/45 text-sm leading-relaxed">
+                <p className="text-white/40 text-sm leading-relaxed">
                   Rua Euridice Chagas Cruz, 1321, Vila Nova, Três Lagoas-MS
                 </p>
               </div>
@@ -40,7 +39,7 @@ const Contact = () => (
                 <Phone className="text-accent" size={18} />
               </div>
               <div>
-                <p className="font-heading font-semibold text-sm mb-1 text-white">Telefone / WhatsApp</p>
+                <p className="font-heading font-semibold text-sm mb-1 text-white">Central de Atendimento</p>
                 <a
                   href="https://api.whatsapp.com/send?phone=5567999636464"
                   target="_blank"
@@ -74,16 +73,16 @@ const Contact = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white/[0.03] border border-white/8 rounded-2xl p-10 shadow-2xl shadow-black/20"
+          className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-10 shadow-2xl shadow-black/25"
         >
           <h3 className="font-heading font-bold text-xl mb-3 text-white">
-            Solicite sua cotação corporativa
+            Solicite sua proposta corporativa
           </h3>
-          <p className="text-white/45 text-sm mb-8 leading-relaxed">
-            Fale diretamente com nosso time comercial pelo WhatsApp e receba uma proposta personalizada para a operação da sua empresa.
+          <p className="text-white/40 text-sm mb-8 leading-relaxed">
+            Fale diretamente com nosso time de consultores pelo WhatsApp e receba uma proposta personalizada de mobilidade corporativa para a operação da sua empresa.
           </p>
           <a
-            href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa%20de%20transporte%20executivo."
+            href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa%20de%20mobilidade%20executiva."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4.5 rounded-lg font-heading font-bold hover:bg-accent-hover transition-all shadow-lg shadow-accent/20"
@@ -91,10 +90,10 @@ const Contact = () => (
             <MessageCircle size={22} />
             Solicitar Cotação Corporativa
           </a>
-          <div className="mt-6 flex items-center justify-center gap-2 text-white/25 text-xs">
-            <span className="w-4 h-px bg-white/20" />
+          <div className="mt-6 flex items-center justify-center gap-2 text-white/20 text-xs">
+            <span className="w-4 h-px bg-white/15" />
             Resposta em até 2 horas úteis
-            <span className="w-4 h-px bg-white/20" />
+            <span className="w-4 h-px bg-white/15" />
           </div>
         </motion.div>
       </div>

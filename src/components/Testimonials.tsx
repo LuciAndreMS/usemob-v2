@@ -5,21 +5,25 @@ const testimonials = [
   {
     name: "João Paulo",
     role: "Coordenador de Logística",
+    company: "Multinacional do Setor de Celulose",
     text: "A UseMOB é a empresa escolhida para atender os executivos da nossa empresa no MS pela qualidade, confiabilidade e eficiência nos serviços prestados. Profissionais capacitados, veículos confortáveis, segurança e pontualidade.",
   },
   {
     name: "Priscila Martins",
     role: "Analista de RH",
+    company: "Indústria de Grande Porte",
     text: "Excelente atendimento e pontualidade! Carro confortável, limpo e espaçoso! Preço justo! Nota 1000 para a empresa, destaque para a qualidade impecável dos veículos e pontualidade nos horários!",
   },
   {
     name: "Marcelo Pimentel",
     role: "Gerente de Projetos",
+    company: "Empresa de Engenharia e Infraestrutura",
     text: "A UseMOB sempre se mostra mais do que uma prestadora de serviços, uma grande parceira preocupada em oferecer o melhor, qualidade e pronta disposição em nos atender. Profissionalismo e respeito aos clientes.",
   },
   {
     name: "Fernando Augusto",
     role: "Diretor Executivo",
+    company: "Grupo Empresarial Regional",
     text: "Atendimento nota mil, carro excelente, limpo, pontualidade no horário combinado, motorista cuidadoso e atencioso. Registro meu agradecimento pelo profissionalismo e excelência, super recomendo!",
   },
 ];
@@ -42,13 +46,13 @@ const Testimonials = () => (
         className="text-center mb-14"
       >
         <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-xs font-semibold tracking-[0.2em] uppercase">
-          Depoimentos
+          Cases Corporativos
         </motion.span>
         <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-4 text-foreground leading-tight">
-          A <span className="text-accent">confiança</span> de quem já opera conosco
+          A <span className="text-accent">confiança</span> de gestores e empresas
         </motion.h2>
         <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-          Gestores e empresas que comprovaram a excelência operacional da UseMOB em mobilidade corporativa.
+          Gestores, coordenadores e diretores que comprovaram a eficiência operacional e a confiabilidade da UseMOB como parceira em mobilidade corporativa.
         </motion.p>
       </motion.div>
 
@@ -61,9 +65,9 @@ const Testimonials = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 relative"
+            className="bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 relative"
           >
-            <Quote className="text-accent/15 mb-5" size={36} />
+            <Quote className="text-accent/12 mb-5" size={36} />
             <div className="flex gap-0.5 mb-4">
               {[...Array(5)].map((_, j) => (
                 <Star key={j} className="text-accent fill-accent" size={14} />
@@ -73,12 +77,13 @@ const Testimonials = () => (
               "{t.text}"
             </p>
             <div className="flex items-center gap-3 border-t border-border pt-5">
-              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center font-heading font-bold text-accent text-sm">
+              <div className="w-11 h-11 rounded-full bg-accent/10 flex items-center justify-center font-heading font-bold text-accent text-sm">
                 {t.name.charAt(0)}
               </div>
               <div>
                 <p className="font-heading font-bold text-foreground text-sm">{t.name}</p>
                 <p className="text-xs text-muted-foreground">{t.role}</p>
+                <p className="text-xs text-accent/70 font-medium">{t.company}</p>
               </div>
             </div>
           </motion.div>

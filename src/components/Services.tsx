@@ -19,38 +19,38 @@ const fadeUp = {
 const services = [
   {
     icon: Car,
-    title: "Transporte Executivo Corporativo",
-    desc: "Gestão dedicada com motoristas profissionais, pontualidade e discrição para executivos e deslocamentos corporativos estratégicos.",
+    title: "Gestão de Transporte Executivo",
+    desc: "Operação dedicada com motoristas profissionais, gestão de escala e monitoramento em tempo real para deslocamentos estratégicos de diretoria e equipes corporativas.",
     image: serv01,
   },
   {
     icon: Plane,
-    title: "Traslados Aeroportuários",
-    desc: "Transfer corporativo com monitoramento de voo, recepção personalizada e frota sedan ou van para equipes e diretoria.",
+    title: "Traslados Aeroportuários Corporativos",
+    desc: "Transfer empresarial com monitoramento de voo, recepção personalizada e frota sedan ou van — eficiência e pontualidade para equipes e executivos em trânsito.",
     image: serv02,
   },
   {
     icon: Heart,
-    title: "Transporte para Eventos Especiais",
-    desc: "Elegância, pontualidade e atenção aos detalhes para ocasiões especiais e celebrações corporativas ou particulares.",
+    title: "Mobilidade para Eventos Corporativos",
+    desc: "Logística de transporte completa para congressos, feiras, celebrações institucionais e eventos corporativos com coordenação operacional dedicada.",
     image: serv03,
   },
   {
     icon: Package,
-    title: "Logística de Encomendas",
-    desc: "Operação ágil de coletas e entregas com veículos utilitários dedicados e rastreamento em tempo real.",
+    title: "Logística Expressa de Encomendas",
+    desc: "Operação ágil de coletas e entregas com veículos utilitários dedicados, rastreamento em tempo real e controle total da cadeia de distribuição.",
     image: serv04,
   },
   {
     icon: Bus,
-    title: "Locação de Frotas com Motorista",
-    desc: "Frotas sob medida para congressos, feiras, eventos corporativos e operações empresariais de grande porte.",
+    title: "Locação de Frotas com Gestão",
+    desc: "Frotas dimensionadas sob medida para operações contínuas, projetos industriais e demandas de grande porte — com gestão operacional inclusa e indicadores de desempenho.",
     image: serv05,
   },
   {
     icon: Bike,
-    title: "Transporte de Documentos",
-    desc: "Solução expressa e confiável para entregas corporativas de documentos sensíveis e correspondências urgentes.",
+    title: "Transporte Seguro de Documentos",
+    desc: "Solução expressa e confiável para entregas corporativas de documentos sensíveis, correspondências urgentes e materiais com protocolo de segurança.",
     image: serv06,
   },
 ];
@@ -69,21 +69,21 @@ const Services = () => (
           custom={0}
           className="text-accent font-heading text-xs font-semibold tracking-[0.2em] uppercase"
         >
-          Serviços
+          Soluções Corporativas
         </motion.span>
         <motion.h2
           variants={fadeUp}
           custom={1}
           className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-4 text-white leading-tight"
         >
-          Soluções <span className="text-accent">integradas</span> de mobilidade corporativa
+          Gestão <span className="text-accent">integrada</span> de mobilidade para sua empresa
         </motion.h2>
         <motion.p
           variants={fadeUp}
           custom={2}
           className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed"
         >
-          Do transporte executivo diário à gestão de frotas para operações de grande porte — estrutura completa para sua empresa.
+          Da gestão de transporte executivo diário à operação de frotas para grandes projetos industriais — estrutura completa para empresas que exigem controle, eficiência e confiabilidade.
         </motion.p>
       </motion.div>
 
@@ -96,7 +96,7 @@ const Services = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-white/[0.03] border border-white/8 rounded-xl overflow-hidden group hover:border-accent/25 transition-all duration-300 flex flex-col shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/20"
+            className="bg-white/[0.03] border border-white/[0.06] rounded-xl overflow-hidden group hover:border-accent/25 transition-all duration-300 flex flex-col shadow-lg shadow-black/15 hover:shadow-xl hover:shadow-black/25"
           >
             <div className="h-48 overflow-hidden">
               <img
@@ -111,7 +111,7 @@ const Services = () => (
                 <s.icon className="text-accent" size={24} />
               </div>
               <h3 className="font-heading font-bold text-base mb-2.5 text-white">{s.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed flex-1">
+              <p className="text-white/45 text-sm leading-relaxed flex-1">
                 {s.desc}
               </p>
             </div>
@@ -128,7 +128,7 @@ const Services = () => (
         className="text-center mt-16"
       >
         <a
-          href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa."
+          href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa%20de%20mobilidade."
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2.5 bg-accent text-accent-foreground px-10 py-4.5 rounded-lg font-heading font-bold hover:bg-accent-hover transition-all shadow-xl shadow-accent/25 hover:shadow-accent/40"

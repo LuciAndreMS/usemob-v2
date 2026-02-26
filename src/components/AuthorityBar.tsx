@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Building2, Clock, Users, TrendingUp, MapPin } from "lucide-react";
+import { Building2, Clock, Users, BarChart3, MapPin } from "lucide-react";
 
 const stats = [
-  { icon: TrendingUp, value: "Desde 2017", label: "Operação Contínua", sub: "Mais de 8 anos no mercado" },
+  { icon: BarChart3, value: "Desde 2017", label: "Operação Contínua", sub: "Mais de 8 anos no mercado" },
   { icon: Building2, value: "500+", label: "Clientes Corporativos", sub: "Empresas de médio e grande porte" },
   { icon: Users, value: "50+", label: "Motoristas Dedicados", sub: "Equipe treinada e uniformizada" },
   { icon: Clock, value: "24/7", label: "Disponibilidade Total", sub: "Operação ininterrupta" },

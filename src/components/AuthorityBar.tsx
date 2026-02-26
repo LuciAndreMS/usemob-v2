@@ -11,9 +11,8 @@ const stats = [
 
 const AuthorityBar = () => (
   <section className="py-20 md:py-24 bg-navy-secondary relative overflow-hidden">
-    {/* Depth layers */}
     <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent" />
-    <div className="absolute inset-0 bg-gradient-to-r from-accent/[0.02] via-transparent to-accent/[0.02]" />
+    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/[0.04] rounded-full blur-[150px]" />
 
     <div className="section-container relative z-10">
       <motion.p
@@ -39,9 +38,9 @@ const AuthorityBar = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-white/[0.02] border border-white/[0.04] hover:border-accent/15 transition-all duration-300"
+            className="flex flex-col items-center text-center gap-4 p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:border-accent/20 transition-all duration-300"
           >
-            <div className="w-14 h-14 rounded-xl bg-accent/10 border border-accent/10 flex items-center justify-center shadow-lg shadow-accent/5">
+            <div className="w-14 h-14 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center shadow-lg shadow-accent/10">
               <stat.icon className="text-accent" size={24} />
             </div>
             <div>

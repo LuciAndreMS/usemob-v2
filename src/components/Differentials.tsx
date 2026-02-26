@@ -20,9 +20,8 @@ const fadeUp = {
 
 const Differentials = () => (
   <section id="diferenciais" className="section-padding bg-navy-secondary relative overflow-hidden">
-    {/* Depth layers */}
-    <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.03] via-transparent to-transparent" />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.04] via-transparent to-transparent" />
+    <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/[0.05] rounded-full blur-[120px]" />
 
     <div className="section-container relative z-10">
       <motion.div
@@ -35,7 +34,7 @@ const Differentials = () => (
           Diferenciais Corporativos
         </motion.span>
         <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-4 text-white leading-tight">
-          Por que grandes empresas <span className="text-accent">escolhem</span> a UseMOB
+          Por que grandes empresas <span className="text-gradient">escolhem</span> a UseMOB
         </motion.h2>
         <motion.p variants={fadeUp} custom={2} className="text-white/45 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
           Infraestrutura operacional construída para atender as exigências de compliance, eficiência e confiabilidade de empresas de médio e grande porte em Três Lagoas e região.
@@ -51,9 +50,9 @@ const Differentials = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="flex gap-5 bg-white/[0.03] border border-white/[0.06] rounded-xl p-7 hover:border-accent/20 transition-all duration-300 shadow-lg shadow-black/15 hover:shadow-xl hover:shadow-black/25"
+            className="flex gap-5 bg-white/[0.03] border border-white/[0.06] rounded-xl p-7 hover:border-accent/25 transition-all duration-300 shadow-lg shadow-black/15 hover:shadow-xl hover:shadow-accent/10"
           >
-            <div className="flex-shrink-0 w-13 h-13 rounded-xl bg-accent/8 border border-accent/10 flex items-center justify-center">
+            <div className="flex-shrink-0 w-13 h-13 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center">
               <item.icon className="text-accent" size={24} />
             </div>
             <div>

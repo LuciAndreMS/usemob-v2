@@ -76,7 +76,7 @@ const Services = () => (
           custom={1}
           className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-4 text-white leading-tight"
         >
-          Gestão <span className="text-accent">integrada</span> de mobilidade para sua empresa
+          Gestão <span className="text-gradient">integrada</span> de mobilidade para sua empresa
         </motion.h2>
         <motion.p
           variants={fadeUp}
@@ -96,7 +96,7 @@ const Services = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-white/[0.03] border border-white/[0.06] rounded-xl overflow-hidden group hover:border-accent/25 transition-all duration-300 flex flex-col shadow-lg shadow-black/15 hover:shadow-xl hover:shadow-black/25"
+            className="bg-white/[0.03] border border-white/[0.06] rounded-xl overflow-hidden group hover:border-accent/25 transition-all duration-300 flex flex-col shadow-lg shadow-black/15 hover:shadow-xl hover:shadow-accent/10"
           >
             <div className="h-48 overflow-hidden">
               <img
@@ -107,7 +107,7 @@ const Services = () => (
               />
             </div>
             <div className="p-7 flex flex-col flex-1">
-              <div className="w-12 h-12 rounded-xl bg-accent/8 border border-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
                 <s.icon className="text-accent" size={24} />
               </div>
               <h3 className="font-heading font-bold text-base mb-2.5 text-white">{s.title}</h3>
@@ -119,7 +119,6 @@ const Services = () => (
         ))}
       </div>
 
-      {/* Secondary CTA */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +130,7 @@ const Services = () => (
           href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa%20de%20mobilidade."
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2.5 bg-accent text-accent-foreground px-10 py-4.5 rounded-lg font-heading font-bold hover:bg-accent-hover transition-all shadow-xl shadow-accent/25 hover:shadow-accent/40"
+          className="inline-flex items-center gap-2.5 bg-accent text-accent-foreground px-10 py-4.5 rounded-lg font-heading font-bold hover:bg-accent-hover transition-all shadow-xl shadow-accent/30 hover:shadow-accent/50"
         >
           Solicitar Proposta Corporativa
           <ArrowRight size={18} />

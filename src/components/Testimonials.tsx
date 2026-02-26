@@ -65,9 +65,10 @@ const Testimonials = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 relative"
+            className="bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-xl hover:shadow-accent/[0.06] transition-all duration-300 relative group"
           >
-            <Quote className="text-accent/12 mb-5" size={36} />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/30 via-accent/10 to-transparent rounded-t-xl" />
+            <Quote className="text-accent/15 mb-5" size={36} />
             <div className="flex gap-0.5 mb-4">
               {[...Array(5)].map((_, j) => (
                 <Star key={j} className="text-accent fill-accent" size={14} />

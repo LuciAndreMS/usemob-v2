@@ -56,6 +56,8 @@ export default {
         charcoal: "hsl(var(--charcoal))",
         "surface-elevated": "hsl(var(--surface-elevated))",
         "accent-hover": "hsl(var(--accent-hover))",
+        "brand-cyan": "hsl(var(--brand-cyan))",
+        "brand-cyan-hover": "hsl(var(--brand-cyan-hover))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

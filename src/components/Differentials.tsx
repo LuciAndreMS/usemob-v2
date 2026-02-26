@@ -19,18 +19,21 @@ const fadeUp = {
 };
 
 const Differentials = () => (
-  <section id="diferenciais" className="section-padding bg-navy-secondary">
-    <div className="section-container">
+  <section id="diferenciais" className="section-padding bg-navy-secondary relative overflow-hidden">
+    {/* Subtle depth */}
+    <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.02] via-transparent to-transparent" />
+
+    <div className="section-container relative z-10">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center mb-12"
+        className="text-center mb-14"
       >
-        <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
+        <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-xs font-semibold tracking-[0.2em] uppercase">
           Diferenciais
         </motion.span>
-        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-white">
+        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-4 text-white leading-tight">
           Por que grandes empresas <span className="text-accent">confiam</span> na UseMOB
         </motion.h2>
         <motion.p variants={fadeUp} custom={2} className="text-white/50 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
@@ -47,14 +50,14 @@ const Differentials = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="flex gap-5 bg-white/[0.03] border border-white/8 rounded-xl p-6 hover:border-accent/20 transition-all duration-300"
+            className="flex gap-5 bg-white/[0.03] border border-white/8 rounded-xl p-7 hover:border-accent/20 transition-all duration-300 shadow-lg shadow-black/10 hover:shadow-xl"
           >
-            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/8 flex items-center justify-center">
-              <item.icon className="text-accent" size={22} />
+            <div className="flex-shrink-0 w-13 h-13 rounded-xl bg-accent/8 border border-accent/10 flex items-center justify-center">
+              <item.icon className="text-accent" size={24} />
             </div>
             <div>
-              <h3 className="font-heading font-bold text-base mb-2 text-white">{item.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+              <h3 className="font-heading font-bold text-base mb-2.5 text-white">{item.title}</h3>
+              <p className="text-white/45 text-sm leading-relaxed">{item.desc}</p>
             </div>
           </motion.div>
         ))}

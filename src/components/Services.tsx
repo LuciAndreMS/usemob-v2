@@ -62,26 +62,26 @@ const Services = () => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center mb-12"
+        className="text-center mb-14"
       >
         <motion.span
           variants={fadeUp}
           custom={0}
-          className="text-accent font-heading text-sm font-semibold tracking-widest uppercase"
+          className="text-accent font-heading text-xs font-semibold tracking-[0.2em] uppercase"
         >
           Serviços
         </motion.span>
         <motion.h2
           variants={fadeUp}
           custom={1}
-          className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-white"
+          className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-4 text-white leading-tight"
         >
           Soluções <span className="text-accent">integradas</span> de mobilidade corporativa
         </motion.h2>
         <motion.p
           variants={fadeUp}
           custom={2}
-          className="text-white/50 text-lg max-w-2xl mx-auto"
+          className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed"
         >
           Do transporte executivo diário à gestão de frotas para operações de grande porte — estrutura completa para sua empresa.
         </motion.p>
@@ -96,7 +96,7 @@ const Services = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-white/[0.03] border border-white/8 rounded-xl overflow-hidden group hover:border-accent/30 transition-all duration-300 flex flex-col"
+            className="bg-white/[0.03] border border-white/8 rounded-xl overflow-hidden group hover:border-accent/25 transition-all duration-300 flex flex-col shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/20"
           >
             <div className="h-48 overflow-hidden">
               <img
@@ -106,11 +106,11 @@ const Services = () => (
                 loading="lazy"
               />
             </div>
-            <div className="p-6 flex flex-col flex-1">
-              <div className="w-12 h-12 rounded-lg bg-accent/8 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors">
+            <div className="p-7 flex flex-col flex-1">
+              <div className="w-12 h-12 rounded-xl bg-accent/8 border border-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors">
                 <s.icon className="text-accent" size={24} />
               </div>
-              <h3 className="font-heading font-bold text-base mb-2 text-white">{s.title}</h3>
+              <h3 className="font-heading font-bold text-base mb-2.5 text-white">{s.title}</h3>
               <p className="text-white/50 text-sm leading-relaxed flex-1">
                 {s.desc}
               </p>
@@ -125,13 +125,13 @@ const Services = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-center mt-14"
+        className="text-center mt-16"
       >
         <a
           href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa."
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-md font-heading font-semibold hover:bg-accent-hover transition-colors"
+          className="inline-flex items-center gap-2.5 bg-accent text-accent-foreground px-10 py-4.5 rounded-lg font-heading font-bold hover:bg-accent-hover transition-all shadow-xl shadow-accent/25 hover:shadow-accent/40"
         >
           Solicitar Proposta Corporativa
           <ArrowRight size={18} />

@@ -41,19 +41,19 @@ const About = () => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="max-w-3xl mx-auto text-center mb-12"
+        className="max-w-3xl mx-auto text-center mb-14"
       >
         <motion.span
           variants={fadeUp}
           custom={0}
-          className="text-accent font-heading text-sm font-semibold tracking-widest uppercase"
+          className="text-accent font-heading text-xs font-semibold tracking-[0.2em] uppercase"
         >
           Sobre a UseMOB
         </motion.span>
         <motion.h2
           variants={fadeUp}
           custom={1}
-          className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-6 text-foreground"
+          className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-6 text-foreground leading-tight"
         >
           Mais de uma década de <span className="text-accent">confiança</span> no mercado corporativo
         </motion.h2>
@@ -78,18 +78,18 @@ const About = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-md transition-all duration-300"
+            className="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
           >
-            <div className="h-48 overflow-hidden">
+            <div className="h-52 overflow-hidden">
               <img
                 src={p.image}
                 alt={`${p.title} - mobilidade corporativa em Três Lagoas`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
             </div>
             <div className="p-8">
-              <div className="w-12 h-12 rounded-lg bg-accent/8 flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-xl bg-accent/8 border border-accent/10 flex items-center justify-center mb-5">
                 <p.icon className="text-accent" size={22} />
               </div>
               <h3 className="font-heading font-bold text-xl mb-3 text-foreground">{p.title}</h3>

@@ -5,10 +5,10 @@ import carousel4 from "@/assets/carousel-4.jpg";
 import carousel5 from "@/assets/carousel-5.jpg";
 
 const vehicles = [
-  { image: carousel2, alt: "Sedan executivo para transporte corporativo em Três Lagoas", label: "Sedan Executivo" },
-  { image: carousel3, alt: "Van corporativa para transporte de equipes em Mato Grosso do Sul", label: "Van Corporativa" },
-  { image: carousel4, alt: "Frota de veículos executivos UseMOB para mobilidade empresarial", label: "Frota Premium" },
-  { image: carousel5, alt: "Veículo utilitário para logística de encomendas corporativas", label: "Utilitário Dedicado" },
+  { image: carousel2, alt: "Sedan executivo para transporte corporativo em Três Lagoas", label: "Sedan Executivo", desc: "Conforto e discrição para deslocamentos de diretoria" },
+  { image: carousel3, alt: "Van corporativa para transporte de equipes em Mato Grosso do Sul", label: "Van Corporativa", desc: "Capacidade para equipes e grupos empresariais" },
+  { image: carousel4, alt: "Frota de veículos executivos UseMOB para mobilidade empresarial", label: "Frota Premium", desc: "Veículos de última geração com manutenção rigorosa" },
+  { image: carousel5, alt: "Veículo utilitário para logística de encomendas corporativas", label: "Utilitário Dedicado", desc: "Operação logística ágil e rastreada" },
 ];
 
 const fadeUp = {
@@ -26,15 +26,15 @@ const VehicleShowcase = () => (
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="text-center mb-12"
+        className="text-center mb-14"
       >
-        <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-sm font-semibold tracking-widest uppercase">
+        <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-xs font-semibold tracking-[0.2em] uppercase">
           Nossa Frota
         </motion.span>
-        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-heading font-bold mt-4 mb-4 text-foreground">
+        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-4 text-foreground leading-tight">
           Veículos <span className="text-accent">padronizados</span> para operações corporativas
         </motion.h2>
-        <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
           Frota completa, higienizada e com manutenção preventiva rigorosa — pronta para atender operações de qualquer escala.
         </motion.p>
       </motion.div>
@@ -48,9 +48,9 @@ const VehicleShowcase = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="group rounded-xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-all duration-300"
+            className="group rounded-xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-lg transition-all duration-300"
           >
-            <div className="h-52 overflow-hidden">
+            <div className="h-56 overflow-hidden">
               <img
                 src={v.image}
                 alt={v.alt}
@@ -58,8 +58,9 @@ const VehicleShowcase = () => (
                 loading="lazy"
               />
             </div>
-            <div className="p-5">
-              <h3 className="font-heading font-bold text-foreground">{v.label}</h3>
+            <div className="p-6">
+              <h3 className="font-heading font-bold text-foreground mb-1">{v.label}</h3>
+              <p className="text-muted-foreground text-sm">{v.desc}</p>
             </div>
           </motion.div>
         ))}

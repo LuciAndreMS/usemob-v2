@@ -1,5 +1,3 @@
-HERO
-
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";

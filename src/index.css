@@ -6,93 +6,88 @@
 
 @layer base {
   :root {
-    --background: 220 30% 97%;
-    --foreground: 220 20% 12%;
+  --background: 210 20% 98%;
+  --foreground: 220 15% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 15% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 15% 10%;
 
-    --primary: 215 68% 11%;
-    --primary-foreground: 220 30% 97%;
+  --primary: 220 15% 10%;
+  --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 40% 93%;
-    --secondary-foreground: 220 20% 12%;
+  --secondary: 210 20% 94%;
+  --secondary-foreground: 220 15% 15%;
 
-    --muted: 220 25% 94%;
-    --muted-foreground: 215 12% 48%;
+  --muted: 210 20% 94%;
+  --muted-foreground: 220 10% 45%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 100%;
+  /* 🔥 NOVO AMARELO PREMIUM */
+  --accent: 45 100% 52%;
+  --accent-foreground: 220 15% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+  --destructive: 0 80% 55%;
+  --destructive-foreground: 0 0% 100%;
 
-    --border: 220 18% 89%;
-    --input: 220 18% 89%;
-    --ring: 262 83% 58%;
+  --border: 210 15% 88%;
+  --input: 210 15% 88%;
+  --ring: 45 100% 52%;
 
-    --radius: 0.5rem;
+  --radius: 0.6rem;
 
-    --sidebar-background: 215 68% 11%;
-    --sidebar-foreground: 220 30% 97%;
-    --sidebar-primary: 262 83% 58%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 55% 18%;
-    --sidebar-accent-foreground: 220 30% 97%;
-    --sidebar-border: 215 55% 20%;
-    --sidebar-ring: 262 83% 58%;
+  /* 🔥 CORES CORPORATIVAS */
+  --navy: 220 18% 8%;
+  --navy-secondary: 220 16% 12%;
+  --charcoal: 220 15% 14%;
+  --surface-elevated: 210 20% 96%;
 
-    /* Custom tokens */
-    --navy: 215 68% 11%;
-    --navy-secondary: 213 60% 18%;
-    --charcoal: 220 20% 12%;
-    --surface-elevated: 220 25% 96%;
-    --accent-hover: 262 83% 50%;
-    --brand-cyan: 197 100% 40%;
-    --brand-cyan-hover: 197 100% 33%;
-  }
+  /* Hover mais elegante */
+  --accent-hover: 45 100% 45%;
+
+  /* opcional (não usar muito) */
+  --brand-cyan: 197 100% 40%;
+  --brand-cyan-hover: 197 100% 33%;
+}
 
   .dark {
-    --background: 215 68% 5%;
-    --foreground: 220 30% 95%;
+    --background: 220 18% 6%;
+  --foreground: 210 20% 96%;
 
-    --card: 215 68% 9%;
-    --card-foreground: 220 30% 95%;
+  --card: 220 18% 8%;
+  --card-foreground: 210 20% 96%;
 
-    --popover: 215 68% 9%;
-    --popover-foreground: 220 30% 95%;
+  --popover: 220 18% 8%;
+  --popover-foreground: 210 20% 96%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 100%;
+  --primary: 45 100% 52%;
+  --primary-foreground: 220 15% 10%;
 
-    --secondary: 215 55% 16%;
-    --secondary-foreground: 220 30% 95%;
+  --secondary: 220 15% 12%;
+  --secondary-foreground: 210 20% 96%;
 
-    --muted: 215 55% 14%;
-    --muted-foreground: 215 12% 55%;
+  --muted: 220 15% 10%;
+  --muted-foreground: 210 10% 60%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 100%;
+  --accent: 45 100% 52%;
+  --accent-foreground: 220 15% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+  --destructive: 0 80% 55%;
+  --destructive-foreground: 0 0% 100%;
 
-    --border: 215 55% 18%;
-    --input: 215 55% 18%;
-    --ring: 262 83% 58%;
+  --border: 220 15% 14%;
+  --input: 220 15% 14%;
+  --ring: 45 100% 52%;
 
-    --surface-elevated: 215 68% 10%;
-    --navy: 215 68% 5%;
-    --navy-secondary: 213 60% 12%;
-    --charcoal: 215 55% 14%;
-    --accent-hover: 262 83% 50%;
-    --brand-cyan: 197 100% 40%;
-    --brand-cyan-hover: 197 100% 33%;
-  }
+  --surface-elevated: 220 18% 10%;
 
+  --navy: 220 18% 6%;
+  --navy-secondary: 220 16% 10%;
+  --charcoal: 220 15% 12%;
+
+  --accent-hover: 45 100% 45%;
+}
   * {
     @apply border-border;
   }
@@ -108,8 +103,8 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-[hsl(262,70%,72%)];
-  }
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-yellow-300;
+}
 
   .section-padding {
     @apply py-16 md:py-20;

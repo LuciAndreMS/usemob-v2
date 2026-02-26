@@ -79,7 +79,7 @@ const About = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
+            className="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-accent/[0.06] transition-all duration-300 group"
           >
             <div className="h-52 overflow-hidden">
               <img
@@ -90,7 +90,7 @@ const About = () => (
               />
             </div>
             <div className="p-8">
-              <div className="w-12 h-12 rounded-xl bg-accent/8 border border-accent/10 flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-xl bg-accent/8 border border-accent/15 flex items-center justify-center mb-5">
                 <p.icon className="text-accent" size={22} />
               </div>
               <h3 className="font-heading font-bold text-xl mb-3 text-foreground">{p.title}</h3>

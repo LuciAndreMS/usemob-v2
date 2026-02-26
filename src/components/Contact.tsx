@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, MessageCircle, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 
 const Contact = () => (
   <section id="contato" className="section-padding bg-navy">
@@ -23,7 +23,7 @@ const Contact = () => (
 
           <div className="space-y-7">
             <div className="flex items-start gap-4">
-              <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/10 flex items-center justify-center flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center flex-shrink-0">
                 <MapPin className="text-accent" size={18} />
               </div>
               <div>
@@ -35,7 +35,7 @@ const Contact = () => (
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/10 flex items-center justify-center flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center flex-shrink-0">
                 <Phone className="text-accent" size={18} />
               </div>
               <div>
@@ -52,7 +52,7 @@ const Contact = () => (
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/10 flex items-center justify-center flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center flex-shrink-0">
                 <Mail className="text-accent" size={18} />
               </div>
               <div>
@@ -73,8 +73,9 @@ const Contact = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-10 shadow-2xl shadow-black/25"
+          className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-10 shadow-2xl shadow-accent/[0.08] relative overflow-hidden"
         >
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-accent/50 to-transparent" />
           <h3 className="font-heading font-bold text-xl mb-3 text-white">
             Solicite sua proposta corporativa
           </h3>
@@ -85,7 +86,7 @@ const Contact = () => (
             href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa%20de%20mobilidade%20executiva."
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4.5 rounded-lg font-heading font-bold hover:bg-accent-hover transition-all shadow-lg shadow-accent/20"
+            className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4.5 rounded-lg font-heading font-bold hover:bg-accent-hover transition-all shadow-lg shadow-accent/25"
           >
             <MessageCircle size={22} />
             Solicitar Cotação Corporativa

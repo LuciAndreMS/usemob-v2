@@ -37,7 +37,7 @@ const Navbar = () => {
             href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa."
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-accent-hover transition-colors"
+            className="bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-accent-hover transition-colors shadow-md shadow-accent/20"
           >
             Proposta Corporativa
           </a>

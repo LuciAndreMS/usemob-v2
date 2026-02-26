@@ -48,7 +48,7 @@ const VehicleShowcase = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="group rounded-xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-xl transition-all duration-300"
+            className="group rounded-xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-xl hover:shadow-accent/[0.06] transition-all duration-300"
           >
             <div className="h-56 overflow-hidden">
               <img

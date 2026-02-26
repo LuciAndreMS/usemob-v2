@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import PartnerLogos from "@/components/PartnerLogos";
 import AuthorityBar from "@/components/AuthorityBar";
+import PartnerLogos from "@/components/PartnerLogos";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import VehicleShowcase from "@/components/VehicleShowcase";
@@ -46,8 +46,8 @@ const Index = () => (
     <Navbar />
     <main>
       <Hero />
-      <AuthorityBar />
       <PartnerLogos />
+      <AuthorityBar />
       <About />
       <Services />
       <VehicleShowcase />

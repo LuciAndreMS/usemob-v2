@@ -13,10 +13,8 @@ const Hero = () => (
         loading="eager"
       />
 
-      {/* Dark overlay (mais forte e profissional) */}
-      <div className="absolute inset-0 bg-black/70" />
-
-      {/* Gradiente para leitura */}
+      {/* Overlay profissional */}
+      <div className="absolute inset-0 bg-black/75" />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
     </div>
 
@@ -29,43 +27,52 @@ const Hero = () => (
           className="max-w-3xl"
         >
           {/* Badge */}
-          <span className="inline-block text-yellow-400 text-xs font-semibold tracking-[0.25em] uppercase mb-6 border border-yellow-400/30 px-5 py-2 rounded-full bg-yellow-400/10 backdrop-blur-sm">
+          <span className="inline-block text-accent text-xs font-semibold tracking-[0.25em] uppercase mb-6 border border-accent/30 px-5 py-2 rounded-full bg-accent/10 backdrop-blur-sm">
             Mobilidade Corporativa
           </span>
 
-          {/* Headline */}
+          {/* Headline (nível B2B forte) */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[4.2rem] font-bold leading-[1.05] mb-6 text-white">
             Gestão de{" "}
-            <span className="text-yellow-400">
-              transporte corporativo
+            <span className="text-accent">
+              mobilidade corporativa
             </span>{" "}
-            com padrão profissional
+            com padrão executivo
           </h1>
 
-          {/* Subheadline (mais direto e forte) */}
-          <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
-            Muito mais do que transporte: oferecemos soluções estruturadas de
-            mobilidade para empresas que precisam de segurança, pontualidade e
-            controle operacional.
+          {/* Subheadline (mais estratégica) */}
+          <p className="text-lg md:text-xl text-white/75 mb-8 max-w-2xl leading-relaxed">
+            Estruturamos e operamos o transporte da sua empresa com controle,
+            previsibilidade e segurança — reduzindo riscos operacionais e
+            garantindo pontualidade em cada deslocamento.
           </p>
+
+          {/* Prova (IMPORTANTE PRA CONVERSÃO) */}
+          <div className="flex flex-wrap items-center gap-6 mb-10 text-sm text-white/60">
+            <span>+8 anos de operação</span>
+            <span className="w-1 h-1 bg-white/40 rounded-full" />
+            <span>Atendimento corporativo contínuo</span>
+            <span className="w-1 h-1 bg-white/40 rounded-full" />
+            <span>Frota monitorada e padronizada</span>
+          </div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa."
+              href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20proposta%20corporativa%20de%20mobilidade."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-yellow-400 text-black px-10 py-4 rounded-lg font-semibold text-base hover:bg-yellow-500 transition-all shadow-lg hover:shadow-yellow-400/40 hover:translate-y-[-1px]"
+              className="inline-flex items-center justify-center gap-2.5 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-semibold text-base hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/40 hover:translate-y-[-1px]"
             >
-              Solicitar Cotação Corporativa
+              Solicitar Proposta Corporativa
               <ArrowRight size={18} />
             </a>
 
             <a
-              href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20consultor%20sobre%20transporte%20corporativo."
+              href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20consultor%20sobre%20mobilidade%20corporativa."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 border border-white/20 text-white px-10 py-4 rounded-lg font-semibold text-base hover:border-yellow-400 hover:text-yellow-400 transition-all backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2.5 border border-white/20 text-white px-10 py-4 rounded-lg font-semibold text-base hover:border-accent hover:text-accent transition-all backdrop-blur-sm"
             >
               <MessageCircle size={18} />
               Falar com um Consultor
@@ -73,9 +80,9 @@ const Hero = () => (
           </div>
 
           {/* Linha de confiança */}
-          <div className="mt-10 flex items-center gap-4 text-white/60 text-sm font-medium">
-            <span className="w-10 h-px bg-yellow-400/60" />
-            Atendimento corporativo • Profissionais qualificados • Pontualidade garantida
+          <div className="mt-10 flex items-center gap-4 text-white/50 text-sm font-medium">
+            <span className="w-10 h-px bg-accent/60" />
+            Operação estruturada • Contratos corporativos • Atendimento sob demanda e contínuo
           </div>
         </motion.div>
       </div>

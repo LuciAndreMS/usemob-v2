@@ -1,58 +1,76 @@
 import { motion } from "framer-motion";
-import { Quote, Star } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
     name: "João Paulo",
     role: "Coordenador de Logística",
     company: "Multinacional do Setor de Celulose",
-    text: "A UseMOB é a empresa escolhida para atender os executivos da nossa empresa no MS pela qualidade, confiabilidade e eficiência nos serviços prestados. Profissionais capacitados, veículos confortáveis, segurança e pontualidade.",
+    text: "A UseMOB é a empresa escolhida para atender nossos executivos no MS pela qualidade, confiabilidade e eficiência. Profissionais capacitados, veículos confortáveis e operação extremamente pontual.",
   },
   {
     name: "Priscila Martins",
     role: "Analista de RH",
     company: "Indústria de Grande Porte",
-    text: "Excelente atendimento e pontualidade! Carro confortável, limpo e espaçoso! Preço justo! Nota 1000 para a empresa, destaque para a qualidade impecável dos veículos e pontualidade nos horários!",
+    text: "Excelente atendimento e pontualidade. Veículos limpos, confortáveis e equipe profissional. A UseMOB entrega exatamente o que promete.",
   },
   {
     name: "Marcelo Pimentel",
     role: "Gerente de Projetos",
     company: "Empresa de Engenharia e Infraestrutura",
-    text: "A UseMOB sempre se mostra mais do que uma prestadora de serviços, uma grande parceira preocupada em oferecer o melhor, qualidade e pronta disposição em nos atender. Profissionalismo e respeito aos clientes.",
+    text: "Mais do que uma prestadora de serviço, a UseMOB se posiciona como parceira. Sempre disponível, com alto padrão de qualidade e profissionalismo.",
   },
   {
     name: "Fernando Augusto",
     role: "Diretor Executivo",
     company: "Grupo Empresarial Regional",
-    text: "Atendimento nota mil, carro excelente, limpo, pontualidade no horário combinado, motorista cuidadoso e atencioso. Registro meu agradecimento pelo profissionalismo e excelência, super recomendo!",
+    text: "Serviço de alto nível. Pontualidade, organização e confiabilidade. Recomendo para empresas que precisam de padrão executivo.",
   },
 ];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
-    opacity: 1, y: 0,
+    opacity: 1,
+    y: 0,
     transition: { duration: 0.5, delay: i * 0.12 },
   }),
 };
 
 const Testimonials = () => (
-  <section id="depoimentos" className="section-padding bg-background">
+  <section id="depoimentos" className="section-padding bg-navy text-white">
     <div className="section-container">
+
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
         className="text-center mb-14"
       >
-        <motion.span variants={fadeUp} custom={0} className="text-accent font-heading text-xs font-semibold tracking-[0.2em] uppercase">
-          Cases Corporativos
+        <motion.span
+          variants={fadeUp}
+          custom={0}
+          className="text-accent text-xs font-semibold tracking-[0.2em] uppercase"
+        >
+          Clientes e Parceiros
         </motion.span>
-        <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl lg:text-[2.75rem] font-heading font-bold mt-4 mb-4 text-foreground leading-tight">
-          A <span className="text-accent">confiança</span> de gestores e empresas
+
+        <motion.h2
+          variants={fadeUp}
+          custom={1}
+          className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold mt-4 mb-4"
+        >
+          Empresas que confiam na{" "}
+          <span className="text-accent">UseMOB</span>
         </motion.h2>
-        <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-          Gestores, coordenadores e diretores que comprovaram a eficiência operacional e a confiabilidade da UseMOB como parceira em mobilidade corporativa.
+
+        <motion.p
+          variants={fadeUp}
+          custom={2}
+          className="text-white/50 text-lg max-w-2xl mx-auto"
+        >
+          Gestores, coordenadores e diretores que utilizam a UseMOB como parceira estratégica
+          em mobilidade corporativa.
         </motion.p>
       </motion.div>
 
@@ -65,27 +83,18 @@ const Testimonials = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-xl hover:shadow-accent/[0.06] transition-all duration-300 relative group"
+            className="bg-navy-secondary border border-white/5 rounded-2xl p-8 hover:border-accent/30 transition-all duration-300"
           >
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/30 via-accent/10 to-transparent rounded-t-xl" />
-            <Quote className="text-accent/15 mb-5" size={36} />
-            <div className="flex gap-0.5 mb-4">
-              {[...Array(5)].map((_, j) => (
-                <Star key={j} className="text-accent fill-accent" size={14} />
-              ))}
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
+            <Quote className="text-accent/30 mb-6" size={32} />
+
+            <p className="text-white/70 leading-relaxed mb-8 text-sm">
               "{t.text}"
             </p>
-            <div className="flex items-center gap-3 border-t border-border pt-5">
-              <div className="w-11 h-11 rounded-full bg-accent/10 flex items-center justify-center font-heading font-bold text-accent text-sm">
-                {t.name.charAt(0)}
-              </div>
-              <div>
-                <p className="font-heading font-bold text-foreground text-sm">{t.name}</p>
-                <p className="text-xs text-muted-foreground">{t.role}</p>
-                <p className="text-xs text-accent/70 font-medium">{t.company}</p>
-              </div>
+
+            <div className="border-t border-white/5 pt-5">
+              <p className="font-bold text-white text-sm">{t.name}</p>
+              <p className="text-xs text-white/50">{t.role}</p>
+              <p className="text-xs text-accent font-medium">{t.company}</p>
             </div>
           </motion.div>
         ))}

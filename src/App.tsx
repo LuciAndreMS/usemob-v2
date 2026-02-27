@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-// Novas páginas SEO
+// Páginas SEO
 import TransporteCorporativoTresLagoas from "./pages/TransporteCorporativoTresLagoas";
 import MobilidadeCorporativaMS from "./pages/MobilidadeCorporativaMS";
 import TransporteParaIndustriaMS from "./pages/TransporteParaIndustriaMS";
@@ -21,6 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />

@@ -17,7 +17,11 @@ export default function MobilidadeCorporativaMS() {
         jsonLd={{
           "@type": "Service",
           name: "Mobilidade Corporativa no Mato Grosso do Sul (MS)",
-          provider: { "@type": "Organization", name: "UseMOB Transportes e Locações", url: "https://usemob.com.br/" },
+          provider: {
+            "@type": "Organization",
+            name: "UseMOB Transportes e Locações",
+            url: "https://usemob.com.br/"
+          },
           areaServed: { "@type": "State", name: "Mato Grosso do Sul" },
           serviceType: "Mobilidade Corporativa"
         }}
@@ -28,23 +32,30 @@ export default function MobilidadeCorporativaMS() {
       <main className="pt-20 md:pt-24 bg-[#0B0D12]">
         <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
           <h1 className="text-3xl md:text-5xl font-semibold text-white">Mobilidade corporativa em todo MS</h1>
+
           <p className="mt-5 max-w-3xl text-base md:text-lg text-gray-300">
-            Base em Três Lagoas, atendimento estadual. A UseMOB estrutura mobilidade corporativa com processos,
-            rastreabilidade operacional e padrão executivo — ideal para empresas, multinacionais e grandes operações.
+            Base em Três Lagoas, atendimento estadual. Estrutura de mobilidade corporativa com processos, rastreabilidade
+            operacional e padrão executivo — ideal para empresas, multinacionais e grandes operações.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href={WHATSAPP} className="inline-flex items-center justify-center rounded-md bg-[#FACC15] px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FBBF24]">
+            <a
+              href={WHATSAPP}
+              className="inline-flex items-center justify-center rounded-md bg-[#FACC15] px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FBBF24]"
+            >
               Solicitar proposta corporativa
             </a>
-            <a href="/" className="inline-flex items-center justify-center rounded-md border border-white/15 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/5">
+            <a
+              href="/"
+              className="inline-flex items-center justify-center rounded-md border border-white/15 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/5"
+            >
               Voltar ao site
             </a>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-              <h2 className="text-lg font-semibold text-white">Atendimento B2B/B2G</h2>
+              <h2 className="text-lg font-semibold text-white">Atendimento B2B</h2>
               <p className="mt-2 text-sm text-gray-300">Modelos de contrato, rotinas e padrões adequados ao corporativo.</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-6">

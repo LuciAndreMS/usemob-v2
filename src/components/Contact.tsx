@@ -21,7 +21,6 @@ const Contact = () => {
       "Mensagem:",
       `${mensagem?.trim() || "—"}`,
     ];
-
     return lines.join("\n");
   }, [nome, empresa, email, mensagem]);
 
@@ -32,13 +31,12 @@ const Contact = () => {
 
   return (
     <section id="contato" className="section-padding bg-[#0B0D12] relative overflow-hidden">
-      {/* brilho premium discreto */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-transparent" />
       <div className="absolute -bottom-40 right-0 w-[560px] h-[560px] bg-accent/[0.05] rounded-full blur-[200px]" />
 
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left: Institucional */}
+          {/* Left */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +56,6 @@ const Contact = () => {
               Atendimento para empresas em Três Lagoas e rotas estratégicas no MS.
             </p>
 
-            {/* Bullets (empresa grande) */}
             <div className="grid sm:grid-cols-3 gap-4">
               <div className="rounded-2xl bg-white/[0.03] border border-white/[0.10] p-5 hover:border-accent/25 transition-all">
                 <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-3">
@@ -92,7 +89,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Right: Card de Proposta (pixel-tight) */}
+          {/* Right */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +109,6 @@ const Contact = () => {
               Envie sua solicitação para o comercial.
             </p>
 
-            {/* Form */}
             <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div className="sm:col-span-2">
                 <label className="block text-subtle text-xs mb-2">Nome</label>
@@ -157,19 +153,17 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* CTA (mais estreito, como na referência) */}
-            <div className="relative flex justify-center pt-2">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full max-w-[380px] items-center justify-center gap-3 bg-accent text-accent-foreground px-8 py-3.5 rounded-md font-bold text-sm
-                           hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/35"
-              >
-                <MessageCircle size={20} />
-                Falar com o comercial no WhatsApp
-              </a>
-            </div>
+            {/* BOTÃO IDÊNTICO AO DA SUA 2ª IMAGEM (barra cheia) */}
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4 rounded-lg font-bold text-sm
+                         hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/35"
+            >
+              <MessageCircle size={20} />
+              Falar com o comercial no WhatsApp
+            </a>
           </motion.div>
         </div>
       </div>

@@ -5,32 +5,25 @@ import { MessageCircle, Building2, Clock, ShieldCheck, Mail } from "lucide-react
 const WHATSAPP_PHONE = "5567999636464";
 
 const Contact = () => {
+  const [nome, setNome] = useState("");
   const [empresa, setEmpresa] = useState("");
-  const [cidade, setCidade] = useState("Três Lagoas/MS");
-  const [trechos, setTrechos] = useState("");
-  const [horarios, setHorarios] = useState("");
-  const [pessoasDia, setPessoasDia] = useState("");
-  const [inicio, setInicio] = useState("");
-  const [obs, setObs] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
   const payloadText = useMemo(() => {
     const lines: string[] = [
       "Olá, gostaria de solicitar uma proposta corporativa.",
       "",
+      `Nome: ${nome || "—"}`,
       `Empresa: ${empresa || "—"}`,
-      `Cidade/Operação: ${cidade || "—"}`,
-      `Trechos: ${trechos || "—"}`,
-      `Horários/Escala: ${horarios || "—"}`,
-      `Pessoas/dia: ${pessoasDia || "—"}`,
-      `Início previsto: ${inicio || "—"}`,
+      `E-mail: ${email || "—"}`,
+      "",
+      "Mensagem:",
+      `${mensagem?.trim() || "—"}`,
     ];
 
-    if (obs.trim()) {
-      lines.push("", `Observações: ${obs.trim()}`);
-    }
-
     return lines.join("\n");
-  }, [empresa, cidade, trechos, horarios, pessoasDia, inicio, obs]);
+  }, [nome, empresa, email, mensagem]);
 
   const whatsappHref = useMemo(() => {
     const text = encodeURIComponent(payloadText);
@@ -50,13 +43,15 @@ const Contact = () => {
       <div className="absolute -bottom-40 right-0 w-[560px] h-[560px] bg-accent/[0.05] rounded-full blur-[200px]" />
 
       <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        {/* Faz as duas colunas ficarem com altura equivalente */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left: Institucional */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="h-full"
           >
             <span className="text-gold text-xs font-semibold tracking-[0.2em] uppercase">
               Comercial Corporativo
@@ -103,136 +98,111 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-
-            <p className="text-subtle text-xs leading-relaxed mt-8">
-              Para reduzir ruídos e acelerar a cotação, envie os dados essenciais da operação no formulário ao lado.
-              O texto será montado automaticamente para WhatsApp ou e-mail.
-            </p>
           </motion.div>
 
-          {/* Right: Card de Proposta (com formulário) */}
+          {/* Right: Card de Proposta (mesma altura do lado esquerdo) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="bg-white/[0.03] border border-white/[0.10] rounded-2xl p-10 relative overflow-hidden"
+            className="bg-white/[0.03] border border-white/[0.10] rounded-2xl p-10 relative overflow-hidden h-full flex flex-col"
           >
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute -top-28 -right-28 w-[420px] h-[420px] bg-accent/[0.10] rounded-full blur-[160px]" />
             </div>
 
-            <h3 className="font-bold text-xl mb-3 text-strong">
-              Solicitar proposta corporativa
-            </h3>
+            <div className="relative">
+              <h3 className="font-bold text-xl mb-3 text-strong">
+                Solicitar proposta corporativa
+              </h3>
 
-            <p className="text-muted2 text-sm mb-8 leading-relaxed">
-              Preencha os dados essenciais e envie para o comercial.{" "}
-              <span className="text-subtle">
-                Quanto mais detalhes, mais rápida e precisa será a proposta.
-              </span>
-            </p>
+              <p className="text-muted2 text-sm mb-8 leading-relaxed">
+                Envie sua solicitação para o comercial.{" "}
+                <span className="text-subtle">
+                  Quanto mais contexto, mais precisa será a proposta.
+                </span>
+              </p>
 
-            {/* Form */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              <div className="sm:col-span-2">
-                <label className="block text-subtle text-xs mb-2">Empresa</label>
-                <input
-                  value={empresa}
-                  onChange={(e) => setEmpresa(e.target.value)}
-                  placeholder="Ex: Indústria X / Unidade Três Lagoas"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
-                />
-              </div>
+              {/* Form (enxuto) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                {/* Nome (maior) */}
+                <div className="sm:col-span-2">
+                  <label className="block text-subtle text-xs mb-2">Nome</label>
+                  <input
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
+                    placeholder="Seu nome"
+                    className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3.5 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-subtle text-xs mb-2">Cidade / Operação</label>
-                <input
-                  value={cidade}
-                  onChange={(e) => setCidade(e.target.value)}
-                  placeholder="Ex: Três Lagoas/MS"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
-                />
-              </div>
+                {/* Empresa (menor) */}
+                <div>
+                  <label className="block text-subtle text-xs mb-2">Empresa</label>
+                  <input
+                    value={empresa}
+                    onChange={(e) => setEmpresa(e.target.value)}
+                    placeholder="Nome da empresa"
+                    className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-subtle text-xs mb-2">Pessoas por dia</label>
-                <input
-                  value={pessoasDia}
-                  onChange={(e) => setPessoasDia(e.target.value)}
-                  placeholder="Ex: 20"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
-                />
-              </div>
+                {/* E-mail (menor) */}
+                <div>
+                  <label className="block text-subtle text-xs mb-2">E-mail</label>
+                  <input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="seu@email.com"
+                    type="email"
+                    className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
+                  />
+                </div>
 
-              <div className="sm:col-span-2">
-                <label className="block text-subtle text-xs mb-2">Trechos (origem → destino)</label>
-                <input
-                  value={trechos}
-                  onChange={(e) => setTrechos(e.target.value)}
-                  placeholder="Ex: Centro → Planta Industrial / Hotel → Unidade"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
-                />
-              </div>
-
-              <div className="sm:col-span-2">
-                <label className="block text-subtle text-xs mb-2">Horários / Escala</label>
-                <input
-                  value={horarios}
-                  onChange={(e) => setHorarios(e.target.value)}
-                  placeholder="Ex: seg–sex 07:00 / 17:00 • Turnos 6x1"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
-                />
-              </div>
-
-              <div className="sm:col-span-2">
-                <label className="block text-subtle text-xs mb-2">Início previsto</label>
-                <input
-                  value={inicio}
-                  onChange={(e) => setInicio(e.target.value)}
-                  placeholder="Ex: imediato / 15 dias / 01/04"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
-                />
-              </div>
-
-              <div className="sm:col-span-2">
-                <label className="block text-subtle text-xs mb-2">Observações (opcional)</label>
-                <textarea
-                  value={obs}
-                  onChange={(e) => setObs(e.target.value)}
-                  rows={3}
-                  placeholder="Ex: necessidade de veículo executivo / regras de acesso / EPIs / pontos de embarque"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35 resize-none"
-                />
+                {/* Mensagem (maior) */}
+                <div className="sm:col-span-2">
+                  <label className="block text-subtle text-xs mb-2">Mensagem</label>
+                  <textarea
+                    value={mensagem}
+                    onChange={(e) => setMensagem(e.target.value)}
+                    rows={6}
+                    placeholder="Descreva sua necessidade (trechos, horários, volume, início previsto, etc.)"
+                    className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35 resize-none"
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="space-y-4">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4.5 rounded-lg font-bold
+            {/* CTA area “gruda” no fundo para ajudar a igualar altura */}
+            <div className="relative mt-auto">
+              <div className="space-y-4">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4.5 rounded-lg font-bold
                            hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/35"
-              >
-                <MessageCircle size={22} />
-                Falar com o comercial no WhatsApp
-              </a>
+                >
+                  <MessageCircle size={22} />
+                  Falar com o comercial no WhatsApp
+                </a>
 
-              <a
-                href={mailtoHref}
-                className="flex items-center justify-center gap-3 w-full border border-white/15 text-strong px-6 py-4.5 rounded-lg font-semibold
+                <a
+                  href={mailtoHref}
+                  className="flex items-center justify-center gap-3 w-full border border-white/15 text-strong px-6 py-4.5 rounded-lg font-semibold
                            hover:border-accent/35 hover:text-gold transition-all"
-              >
-                <Mail size={20} />
-                Solicitar cotação por e-mail
-              </a>
-            </div>
+                >
+                  <Mail size={20} />
+                  Solicitar cotação por e-mail
+                </a>
+              </div>
 
-            <div className="mt-6 flex items-center justify-center gap-2 text-subtle text-xs">
-              <span className="w-4 h-px bg-white/15" />
-              Retorno comercial em até <span className="text-strong font-semibold">2 horas úteis</span>
-              <span className="w-4 h-px bg-white/15" />
+              <div className="mt-6 flex items-center justify-center gap-2 text-subtle text-xs">
+                <span className="w-4 h-px bg-white/15" />
+                Retorno comercial em até <span className="text-strong font-semibold">2 horas úteis</span>
+                <span className="w-4 h-px bg-white/15" />
+              </div>
             </div>
           </motion.div>
         </div>

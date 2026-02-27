@@ -12,9 +12,11 @@ const links = [
   { label: "Contato", href: "#contato" },
 ];
 
+const WHATSAPP_PROPOSTA =
+  "https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa.";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
   const close = () => setOpen(false);
 
   return (
@@ -34,26 +36,27 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-white/70 hover:text-white transition-colors font-medium"
+              className="text-sm text-muted2 hover:text-gold transition-colors font-medium"
             >
               {l.label}
             </a>
           ))}
 
           <a
-            href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa."
+            href={WHATSAPP_PROPOSTA}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-yellow-400 text-black px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-yellow-500 transition-colors shadow-lg hover:shadow-yellow-400/30"
+            className="bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold
+                       hover:bg-accent-hover transition-colors shadow-lg hover:shadow-accent/25"
           >
-            Solicitar Cotação
+            Solicitar proposta
           </a>
         </div>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white"
+          className="md:hidden text-strong"
           aria-label="Menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -75,20 +78,25 @@ const Navbar = () => {
                   key={l.href}
                   href={l.href}
                   onClick={close}
-                  className="text-sm text-white/70 hover:text-white transition-colors font-medium"
+                  className="text-sm text-muted2 hover:text-gold transition-colors font-medium"
                 >
                   {l.label}
                 </a>
               ))}
 
               <a
-                href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa."
+                href={WHATSAPP_PROPOSTA}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow-400 text-black px-5 py-2.5 rounded-md text-sm font-semibold text-center hover:bg-yellow-500 transition-colors"
+                className="bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center
+                           hover:bg-accent-hover transition-colors shadow-lg hover:shadow-accent/25"
               >
-                Solicitar Cotação
+                Solicitar proposta
               </a>
+
+              <p className="text-subtle text-xs pt-2">
+                Resposta rápida para cotações corporativas.
+              </p>
             </div>
           </motion.div>
         )}

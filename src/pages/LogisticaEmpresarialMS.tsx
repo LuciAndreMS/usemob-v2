@@ -17,7 +17,11 @@ export default function LogisticaEmpresarialMS() {
         jsonLd={{
           "@type": "Service",
           name: "Logística Empresarial no MS",
-          provider: { "@type": "Organization", name: "UseMOB Transportes e Locações", url: "https://usemob.com.br/" },
+          provider: {
+            "@type": "Organization",
+            name: "UseMOB Transportes e Locações",
+            url: "https://usemob.com.br/"
+          },
           areaServed: { "@type": "State", name: "Mato Grosso do Sul" },
           serviceType: "Logística Empresarial"
         }}
@@ -27,18 +31,26 @@ export default function LogisticaEmpresarialMS() {
 
       <main className="pt-20 md:pt-24 bg-[#0B0D12]">
         <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-          <h1 className="text-3xl md:text-5xl font-semibold text-white">Logística empresarial com foco em previsibilidade</h1>
+          <h1 className="text-3xl md:text-5xl font-semibold text-white">
+            Logística empresarial com foco em previsibilidade
+          </h1>
 
           <p className="mt-5 max-w-3xl text-base md:text-lg text-gray-300">
-            Para operações que exigem organização e execução consistente, a UseMOB entrega uma estrutura de mobilidade e logística
-            com padrão corporativo — reduzindo ruídos e aumentando previsibilidade e segurança.
+            Para operações que exigem organização e execução consistente, a UseMOB entrega uma estrutura de mobilidade e
+            logística com padrão corporativo — reduzindo ruídos e aumentando previsibilidade e segurança.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href={WHATSAPP} className="inline-flex items-center justify-center rounded-md bg-[#FACC15] px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FBBF24]">
+            <a
+              href={WHATSAPP}
+              className="inline-flex items-center justify-center rounded-md bg-[#FACC15] px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FBBF24]"
+            >
               Solicitar proposta corporativa
             </a>
-            <a href="/" className="inline-flex items-center justify-center rounded-md border border-white/15 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/5">
+            <a
+              href="/"
+              className="inline-flex items-center justify-center rounded-md border border-white/15 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/5"
+            >
               Voltar ao site
             </a>
           </div>

@@ -92,13 +92,13 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Right: Card de Proposta (pixel-perfect com a base dos cards da esquerda) */}
+          {/* Right: Card de Proposta (pixel-tight) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="bg-white/[0.03] border border-white/[0.10] rounded-2xl p-8 md:p-9 relative overflow-hidden"
+            className="bg-white/[0.03] border border-white/[0.10] rounded-2xl px-8 pt-8 pb-7 md:px-9 md:pt-9 md:pb-8 relative overflow-hidden"
           >
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute -top-28 -right-28 w-[420px] h-[420px] bg-accent/[0.10] rounded-full blur-[160px]" />
@@ -108,11 +108,11 @@ const Contact = () => {
               Solicitar proposta corporativa
             </h3>
 
-            <p className="relative text-muted2 text-sm mb-6 leading-relaxed">
+            <p className="relative text-muted2 text-sm mb-5 leading-relaxed">
               Envie sua solicitação para o comercial.
             </p>
 
-            {/* Form (compactado milimetricamente) */}
+            {/* Form */}
             <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div className="sm:col-span-2">
                 <label className="block text-subtle text-xs mb-2">Nome</label>
@@ -150,20 +150,20 @@ const Contact = () => {
                 <textarea
                   value={mensagem}
                   onChange={(e) => setMensagem(e.target.value)}
-                  rows={3}
+                  rows={2}
                   placeholder="Descreva sua necessidade (trechos, horários, volume, início previsto, etc.)"
                   className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35 resize-none"
                 />
               </div>
             </div>
 
-            {/* CTA (mais estreito, como na imagem) */}
-            <div className="relative flex justify-center pt-1">
+            {/* CTA (mais estreito, como na referência) */}
+            <div className="relative flex justify-center pt-2">
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-accent text-accent-foreground px-8 py-3.5 rounded-md font-bold text-sm
+                className="inline-flex w-full max-w-[380px] items-center justify-center gap-3 bg-accent text-accent-foreground px-8 py-3.5 rounded-md font-bold text-sm
                            hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/35"
               >
                 <MessageCircle size={20} />

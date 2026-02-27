@@ -17,7 +17,11 @@ export default function LocacaoVeiculosComMotorista() {
         jsonLd={{
           "@type": "Service",
           name: "Locação de Veículos com Motorista",
-          provider: { "@type": "Organization", name: "UseMOB Transportes e Locações", url: "https://usemob.com.br/" },
+          provider: {
+            "@type": "Organization",
+            name: "UseMOB Transportes e Locações",
+            url: "https://usemob.com.br/"
+          },
           areaServed: { "@type": "State", name: "Mato Grosso do Sul" },
           serviceType: "Locação de Veículos com Motorista"
         }}
@@ -27,18 +31,26 @@ export default function LocacaoVeiculosComMotorista() {
 
       <main className="pt-20 md:pt-24 bg-[#0B0D12]">
         <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-          <h1 className="text-3xl md:text-5xl font-semibold text-white">Locação de veículos com motorista para empresas</h1>
+          <h1 className="text-3xl md:text-5xl font-semibold text-white">
+            Locação de veículos com motorista para empresas
+          </h1>
 
           <p className="mt-5 max-w-3xl text-base md:text-lg text-gray-300">
             Solução corporativa para diretoria, equipes técnicas, visitas, eventos e demandas recorrentes.
-            Veículos executivos, motoristas treinados e padrão de atendimento compatível com multinacionais.
+            Veículos executivos, motoristas treinados e padrão compatível com multinacionais.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href={WHATSAPP} className="inline-flex items-center justify-center rounded-md bg-[#FACC15] px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FBBF24]">
+            <a
+              href={WHATSAPP}
+              className="inline-flex items-center justify-center rounded-md bg-[#FACC15] px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FBBF24]"
+            >
               Solicitar proposta corporativa
             </a>
-            <a href="/" className="inline-flex items-center justify-center rounded-md border border-white/15 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/5">
+            <a
+              href="/"
+              className="inline-flex items-center justify-center rounded-md border border-white/15 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/5"
+            >
               Voltar ao site
             </a>
           </div>

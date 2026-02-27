@@ -15,8 +15,9 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "UseMOB Transportes",
-  description: "Transporte executivo corporativo em Três Lagoas-MS. Frota rastreada, motoristas profissionais, traslados de aeroporto, locação de vans e motoboy.",
+  name: "UseMOB Transportes e Locações",
+  description:
+    "Mobilidade corporativa em Três Lagoas-MS. Gestão de transporte empresarial, locação de veículos com motorista, logística corporativa e operações para indústrias.",
   url: "https://usemob.com.br",
   telephone: "+5567999636464",
   email: "contato@usemob.com.br",
@@ -34,9 +35,9 @@ const jsonLd = {
   },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    opens: "00:00",
-    closes: "23:59",
+    dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    opens: "08:00",
+    closes: "18:00",
   },
   sameAs: [],
 };
@@ -44,20 +45,46 @@ const jsonLd = {
 const Index = () => (
   <>
     <Navbar />
-    <main>
+
+    {/* padding-top para compensar navbar fixo */}
+    <main className="pt-20 md:pt-24">
+
+      {/* HERO */}
       <Hero />
-      <PartnerLogos />
+
+      {/* PROVA IMEDIATA */}
       <AuthorityBar />
-      <About />
+
+      {/* LOGOS / PROVA SOCIAL */}
+      <PartnerLogos />
+
+      {/* SOLUÇÕES */}
       <Services />
+
+      {/* FROTA */}
       <VehicleShowcase />
+
+      {/* DIFERENCIAIS */}
       <Differentials />
+
+      {/* CTA FORTE */}
       <CtaBanner />
+
+      {/* INSTITUCIONAL */}
+      <About />
+
+      {/* PROVA SOCIAL */}
       <Testimonials />
+
+      {/* CONTATO */}
       <Contact />
+
     </main>
+
     <Footer />
     <WhatsAppFloat />
+
+    {/* SEO STRUCTURED DATA */}
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

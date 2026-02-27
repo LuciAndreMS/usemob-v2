@@ -1,13 +1,22 @@
-import { createRoot } from "react-dom/client";
-import { StrictMode } from "react";
-import App from "./App.tsx";
-import "./index.css";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+import { componentTagger } from "lovable-tagger";
 
-// Garante que o site fique sempre no tema escuro
-document.documentElement.classList.add("dark");
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+// https://vitejs.dev/config/
+export default defineConfig(({ mode }) => ({
+  base: "/",
+  server: {
+    host: "::",
+    port: 8080,
+    hmr: {
+      overlay: false,
+    },
+  },
+  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+}));

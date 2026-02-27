@@ -17,7 +17,11 @@ export default function TransporteParaIndustriaMS() {
         jsonLd={{
           "@type": "Service",
           name: "Transporte para Indústrias no MS",
-          provider: { "@type": "Organization", name: "UseMOB Transportes e Locações", url: "https://usemob.com.br/" },
+          provider: {
+            "@type": "Organization",
+            name: "UseMOB Transportes e Locações",
+            url: "https://usemob.com.br/"
+          },
           areaServed: { "@type": "State", name: "Mato Grosso do Sul" },
           serviceType: "Transporte para Indústrias"
         }}
@@ -30,15 +34,21 @@ export default function TransporteParaIndustriaMS() {
           <h1 className="text-3xl md:text-5xl font-semibold text-white">Transporte para indústria no MS</h1>
 
           <p className="mt-5 max-w-3xl text-base md:text-lg text-gray-300">
-            Operações industriais exigem previsibilidade. A UseMOB atua com padrão executivo e disciplina operacional:
-            planejamento de rotas, atendimento profissional, gestão de ocorrências e foco total em segurança e pontualidade.
+            Operações industriais exigem previsibilidade. A UseMOB atua com disciplina operacional: planejamento de rotas,
+            atendimento profissional, gestão de ocorrências e foco total em segurança e pontualidade.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href={WHATSAPP} className="inline-flex items-center justify-center rounded-md bg-[#FACC15] px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FBBF24]">
+            <a
+              href={WHATSAPP}
+              className="inline-flex items-center justify-center rounded-md bg-[#FACC15] px-6 py-3 text-sm font-medium text-black transition hover:bg-[#FBBF24]"
+            >
               Solicitar proposta corporativa
             </a>
-            <a href="/" className="inline-flex items-center justify-center rounded-md border border-white/15 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/5">
+            <a
+              href="/"
+              className="inline-flex items-center justify-center rounded-md border border-white/15 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/5"
+            >
               Voltar ao site
             </a>
           </div>
@@ -46,11 +56,11 @@ export default function TransporteParaIndustriaMS() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="rounded-xl border border-white/10 bg-white/5 p-6">
               <h2 className="text-lg font-semibold text-white">Turnos e rotina</h2>
-              <p className="mt-2 text-sm text-gray-300">Apoio a operações com entrada/saída, janela e padrões definidos.</p>
+              <p className="mt-2 text-sm text-gray-300">Suporte a operações com entrada/saída e janelas definidas.</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-6">
               <h2 className="text-lg font-semibold text-white">Controle e rastreabilidade</h2>
-              <p className="mt-2 text-sm text-gray-300">Gestão de qualidade e acompanhamento operacional.</p>
+              <p className="mt-2 text-sm text-gray-300">Acompanhamento operacional e gestão de qualidade.</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-6">
               <h2 className="text-lg font-semibold text-white">Compliance</h2>

@@ -33,11 +33,7 @@ const Hero = () => (
 
           {/* Headline (nível B2B forte) */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[4.2rem] font-bold leading-[1.05] mb-6 text-white">
-            Gestão de{" "}
-            <span className="text-accent">
-              mobilidade corporativa
-            </span>{" "}
-            com padrão executivo
+            Gestão de transporte corporativo para empresas que exigem <span className="text-yellow-400">pontualidade, controle e segurança</span>
           </h1>
 
           {/* Subheadline (mais estratégica) */}

@@ -96,6 +96,24 @@ const Differentials = () => (
             <div className="flex-shrink-0 w-13 h-13 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center">
               <item.icon className="text-yellow-400" size={24} />
             </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+  {items.map((item, i) => (
+    <motion.div ...>
+      ...
+    </motion.div>
+  ))}
+</div>
+
+<div className="text-center mt-16">
+  <a
+    href="https://api.whatsapp.com/send?phone=5567999636464&text=Olá, gostaria de solicitar uma proposta corporativa."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2.5 bg-yellow-400 text-black px-10 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all shadow-lg"
+  >
+    Solicitar Proposta Corporativa
+  </a>
+</div>
             <div>
               <h3 className="font-bold text-base mb-2.5 text-white">{item.title}</h3>
               <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>

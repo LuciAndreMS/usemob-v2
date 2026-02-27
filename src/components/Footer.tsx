@@ -1,6 +1,9 @@
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 import logo from "@/assets/logo.png";
 
+const WHATSAPP_PROPOSTA =
+  "https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa.";
+
 const Footer = () => (
   <footer className="border-t border-white/10 bg-[#0B0D12]">
     <div className="section-container py-20">
@@ -23,7 +26,7 @@ const Footer = () => (
           </p>
 
           <a
-            href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa."
+            href={WHATSAPP_PROPOSTA}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2.5 rounded-lg text-sm font-bold
@@ -46,7 +49,7 @@ const Footer = () => (
               { label: "Soluções", href: "#servicos" },
               { label: "Diferenciais", href: "#diferenciais" },
               { label: "Depoimentos", href: "#depoimentos" },
-              { label: "Contato", href: "#contato" },
+              { label: "Contato", href: "#contato" }
             ].map((item) => (
               <li key={item.label}>
                 <a
@@ -60,19 +63,34 @@ const Footer = () => (
           </ul>
         </div>
 
-        {/* Services */}
+        {/* Services (SEO links discretos) */}
         <div>
           <h4 className="font-bold text-xs uppercase tracking-[0.15em] mb-6 text-subtle">
             Soluções
           </h4>
-          <ul className="space-y-3 text-muted2 text-sm">
-            <li>Mobilidade Executiva e Corporativa</li>
-            <li>Transporte de Colaboradores</li>
-            <li>Operação Assistida (veículo com motorista)</li>
-            <li>Logística Empresarial e demandas operacionais</li>
-            <li>Traslados corporativos (rotas estratégicas)</li>
-            <li>Transporte seguro de documentos</li>
+
+          <ul className="space-y-3">
+            {[
+              { label: "Transporte Corporativo (Três Lagoas)", href: "/transporte-corporativo-tres-lagoas" },
+              { label: "Mobilidade Corporativa (MS)", href: "/mobilidade-corporativa-ms" },
+              { label: "Transporte para Indústrias (MS)", href: "/transporte-para-industria-ms" },
+              { label: "Locação com Motorista", href: "/locacao-veiculos-com-motorista" },
+              { label: "Logística Empresarial (MS)", href: "/logistica-empresarial-ms" }
+            ].map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className="text-muted2 text-sm hover:text-gold transition-colors"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
+
+          <p className="text-subtle text-xs leading-relaxed mt-6">
+            Operação sob contrato • SLA • Padrão corporativo
+          </p>
         </div>
 
         {/* Contact */}
@@ -91,7 +109,7 @@ const Footer = () => (
             <li className="flex items-center gap-3">
               <Phone className="text-gold flex-shrink-0" size={15} />
               <a
-                href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa."
+                href={WHATSAPP_PROPOSTA}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted2 text-sm hover:text-gold transition-colors"
@@ -126,9 +144,7 @@ const Footer = () => (
         <p className="text-subtle text-xs">
           © {new Date().getFullYear()} UseMOB Transportes e Locações. Todos os direitos reservados.
         </p>
-        <p className="text-subtle text-xs">
-          Três Lagoas, MS
-        </p>
+        <p className="text-subtle text-xs">Três Lagoas, MS</p>
       </div>
     </div>
   </footer>

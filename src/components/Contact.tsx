@@ -146,7 +146,7 @@ const Contact = () => {
                 <textarea
                   value={mensagem}
                   onChange={(e) => setMensagem(e.target.value)}
-                  rows={1}
+                  rows={3}
                   placeholder="Descreva sua necessidade (trechos, horários, volume, início previsto, etc.)"
                   className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35 resize-none"
                 />

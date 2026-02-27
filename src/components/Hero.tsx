@@ -38,9 +38,7 @@ const Hero = () => (
 
           {/* Subheadline (mais estratégica) */}
           <p className="text-lg md:text-xl text-white/75 mb-8 max-w-2xl leading-relaxed">
-            Estruturamos e operamos o transporte da sua empresa com controle,
-            previsibilidade e segurança — reduzindo riscos operacionais e
-            garantindo pontualidade em cada deslocamento.
+            Reduza custos, aumente a eficiência operacional e tenha controle total da mobilidade da sua empresa com uma operação estruturada e profissional.
           </p>
 
           {/* Prova (IMPORTANTE PRA CONVERSÃO) */}

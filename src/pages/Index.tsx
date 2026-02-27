@@ -54,36 +54,16 @@ const Index = () => (
 
     <Navbar />
 
-    {/* padding-top para compensar navbar fixo */}
     <main className="pt-20 md:pt-24">
-      {/* HERO */}
       <Hero />
-
-      {/* PROVA IMEDIATA */}
       <AuthorityBar />
-
-      {/* LOGOS / PROVA SOCIAL */}
       <PartnerLogos />
-
-      {/* SOLUÇÕES */}
       <Services />
-
-      {/* FROTA */}
       <VehicleShowcase />
-
-      {/* DIFERENCIAIS */}
       <Differentials />
-
-      {/* CTA FORTE */}
       <CtaBanner />
-
-      {/* INSTITUCIONAL */}
       <About />
-
-      {/* PROVA SOCIAL */}
       <Testimonials />
-
-      {/* CONTATO */}
       <Contact />
     </main>
 

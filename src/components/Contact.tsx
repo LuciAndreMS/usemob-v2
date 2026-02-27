@@ -94,91 +94,90 @@ const Contact = () => {
 
           {/* Right: Card de Proposta (mais curto e alinhado visualmente) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="bg-white/[0.03] border border-white/[0.10] rounded-2xl p-8 md:p-9 relative overflow-hidden"
-          >
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute -top-28 -right-28 w-[420px] h-[420px] bg-accent/[0.10] rounded-full blur-[160px]" />
-            </div>
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.15 }}
+  className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-6 md:p-7 relative overflow-hidden max-w-[520px] ml-auto"
+>
+  <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute -top-28 -right-28 w-[420px] h-[420px] bg-accent/[0.10] rounded-full blur-[160px]" />
+  </div>
 
-            <h3 className="relative font-bold text-xl mb-2 text-strong">
-              Solicitar proposta corporativa
-            </h3>
+  <h3 className="relative font-semibold text-lg mb-2 text-strong">
+    Solicitar proposta corporativa
+  </h3>
 
-            <p className="relative text-muted2 text-sm mb-6 leading-relaxed">
-              Envie sua solicitação para o comercial.
-            </p>
+  <p className="relative text-muted2 text-xs mb-5 leading-relaxed">
+    Envie sua solicitação para o comercial.
+  </p>
 
-            {/* Form (enxuto) */}
-            <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-              {/* Nome (maior) */}
-              <div className="sm:col-span-2">
-                <label className="block text-subtle text-xs mb-2">Nome</label>
-                <input
-                  value={nome}
-                  onChange={(e) => setNome(e.target.value)}
-                  placeholder="Seu nome"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3.5 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
-                />
-              </div>
+  {/* Form */}
+  <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
 
-              {/* Empresa (menor) */}
-              <div>
-                <label className="block text-subtle text-xs mb-2">Empresa</label>
-                <input
-                  value={empresa}
-                  onChange={(e) => setEmpresa(e.target.value)}
-                  placeholder="Nome da empresa"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
-                />
-              </div>
+    {/* Nome */}
+    <div className="sm:col-span-2">
+      <label className="block text-subtle text-[11px] mb-1">Nome</label>
+      <input
+        value={nome}
+        onChange={(e) => setNome(e.target.value)}
+        placeholder="Seu nome"
+        className="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
+      />
+    </div>
 
-              {/* E-mail (menor) */}
-              <div>
-                <label className="block text-subtle text-xs mb-2">E-mail</label>
-                <input
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="seu@email.com"
-                  type="email"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
-                />
-              </div>
+    {/* Empresa */}
+    <div>
+      <label className="block text-subtle text-[11px] mb-1">Empresa</label>
+      <input
+        value={empresa}
+        onChange={(e) => setEmpresa(e.target.value)}
+        placeholder="Nome da empresa"
+        className="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
+      />
+    </div>
 
-              {/* Mensagem (maior) */}
-              <div className="sm:col-span-2">
-                <label className="block text-subtle text-xs mb-2">Mensagem</label>
-                <textarea
-                  value={mensagem}
-                  onChange={(e) => setMensagem(e.target.value)}
-                  rows={5}
-                  placeholder="Descreva sua necessidade (trechos, horários, volume, início previsto, etc.)"
-                  className="w-full rounded-xl bg-black/20 border border-white/10 px-4 py-3 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35 resize-none"
-                />
-              </div>
-            </div>
+    {/* Email */}
+    <div>
+      <label className="block text-subtle text-[11px] mb-1">E-mail</label>
+      <input
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="seu@email.com"
+        type="email"
+        className="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35"
+      />
+    </div>
 
-            {/* CTA único (WhatsApp) */}
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4.5 rounded-lg font-bold
-                         hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/35"
-            >
-              <MessageCircle size={22} />
-              Falar com o comercial no WhatsApp
-            </a>
+    {/* Mensagem */}
+    <div className="sm:col-span-2">
+      <label className="block text-subtle text-[11px] mb-1">Mensagem</label>
+      <textarea
+        value={mensagem}
+        onChange={(e) => setMensagem(e.target.value)}
+        rows={4}
+        placeholder="Descreva sua necessidade"
+        className="w-full rounded-lg bg-black/20 border border-white/10 px-3 py-2.5 text-sm text-strong placeholder:text-white/30 focus:outline-none focus:border-accent/35 resize-none"
+      />
+    </div>
+  </div>
 
-            <div className="relative mt-4 flex items-center justify-center gap-2 text-subtle text-xs">
-              <span className="w-4 h-px bg-white/15" />
-              Retorno comercial em até <span className="text-strong font-semibold">2 horas úteis</span>
-              <span className="w-4 h-px bg-white/15" />
-            </div>
-          </motion.div>
+  {/* CTA */}
+  <a
+    href={whatsappHref}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative flex items-center justify-center gap-2 w-full bg-accent text-accent-foreground px-4 py-3 rounded-md font-semibold text-sm
+               hover:bg-accent-hover transition-all shadow-md hover:shadow-accent/25"
+  >
+    <MessageCircle size={18} />
+    Falar com o comercial
+  </a>
+
+  <div className="relative mt-3 text-center text-[11px] text-subtle">
+    Retorno em até <span className="text-strong font-medium">2h úteis</span>
+  </div>
+</motion.div>
         </div>
       </div>
     </section>

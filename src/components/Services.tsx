@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Car, Plane, Heart, Package, Bus, Bike, ArrowRight } from "lucide-react";
+import { Car, Plane, Package, Bus, FileText, ArrowRight } from "lucide-react";
 import serv01 from "@/assets/serv01.jpg";
 import serv02 from "@/assets/serv02.jpg";
 import serv03 from "@/assets/serv03.jpg";
@@ -19,38 +19,38 @@ const fadeUp = {
 const services = [
   {
     icon: Car,
-    title: "Gestão de Transporte Executivo",
-    desc: "Operação dedicada com motoristas profissionais, gestão de escala e monitoramento em tempo real para deslocamentos estratégicos de diretoria e equipes corporativas.",
+    title: "Mobilidade Executiva e Corporativa",
+    desc: "Operação dedicada com motoristas profissionais, gestão de escalas e acompanhamento operacional para deslocamentos estratégicos de equipes e lideranças.",
     image: serv01,
   },
   {
     icon: Plane,
-    title: "Traslados Aeroportuários Corporativos",
-    desc: "Transfer empresarial com monitoramento de voo, recepção personalizada e frota sedan ou van — eficiência e pontualidade para equipes e executivos em trânsito.",
+    title: "Traslados Corporativos (Aeroporto e Rotas Estratégicas)",
+    desc: "Atendimento empresarial com planejamento de horários, acompanhamento de voo quando aplicável e padrão executivo para equipes em trânsito.",
     image: serv02,
   },
   {
-    icon: Heart,
-    title: "Mobilidade para Eventos Corporativos",
-    desc: "Logística de transporte completa para congressos, feiras, celebrações institucionais e eventos corporativos com coordenação operacional dedicada.",
+    icon: Bus,
+    title: "Transporte de Colaboradores",
+    desc: "Soluções recorrentes para turnos e rotinas operacionais, com organização, previsibilidade e continuidade no atendimento.",
     image: serv03,
   },
   {
     icon: Package,
-    title: "Logística Expressa de Encomendas",
-    desc: "Operação ágil de coletas e entregas com veículos utilitários dedicados, rastreamento em tempo real e controle total da cadeia de distribuição.",
+    title: "Logística Empresarial e Demandas Operacionais",
+    desc: "Coletas, entregas e apoios logísticos com controle, rastreabilidade e priorização conforme a necessidade da sua operação.",
     image: serv04,
   },
   {
     icon: Bus,
-    title: "Locação de Frotas com Gestão",
-    desc: "Frotas dimensionadas sob medida para operações contínuas, projetos industriais e demandas de grande porte — com gestão operacional inclusa e indicadores de desempenho.",
+    title: "Locação de Veículos com Motorista (Operação Assistida)",
+    desc: "Atendimento sob medida para projetos e operações contínuas, com gestão operacional inclusa e padronização de serviço.",
     image: serv05,
   },
   {
-    icon: Bike,
-    title: "Transporte Seguro de Documentos",
-    desc: "Solução expressa e confiável para entregas corporativas de documentos sensíveis, correspondências urgentes e materiais com protocolo de segurança.",
+    icon: FileText,
+    title: "Transporte Seguro de Documentos e Materiais Sensíveis",
+    desc: "Fluxos com protocolo, rastreabilidade e confirmação de entrega para demandas corporativas que exigem cuidado e responsabilidade.",
     image: serv06,
   },
 ];
@@ -67,7 +67,7 @@ const Services = () => (
         <motion.span
           variants={fadeUp}
           custom={0}
-          className="text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase"
+          className="text-gold text-xs font-semibold tracking-[0.2em] uppercase"
         >
           Soluções Corporativas
         </motion.span>
@@ -75,17 +75,18 @@ const Services = () => (
         <motion.h2
           variants={fadeUp}
           custom={1}
-          className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold mt-4 mb-4 text-white leading-tight"
+          className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold mt-4 mb-4 text-strong leading-tight"
         >
-          Gestão <span className="text-yellow-400">integrada</span> de mobilidade para sua empresa
+          Gestão <span className="text-gold">estruturada</span> de mobilidade para sua empresa
         </motion.h2>
 
         <motion.p
           variants={fadeUp}
           custom={2}
-          className="text-white/75 text-lg max-w-2xl mx-auto leading-relaxed"
+          className="text-muted2 text-lg max-w-2xl mx-auto leading-relaxed"
         >
-          Da gestão de transporte executivo diário à operação de frotas para grandes projetos industriais — estrutura completa para empresas que exigem controle, eficiência e confiabilidade.
+          Da mobilidade corporativa diária à operação assistida para projetos e demandas industriais — uma estrutura
+          focada em previsibilidade, controle e confiabilidade.
         </motion.p>
       </motion.div>
 
@@ -98,27 +99,32 @@ const Services = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="bg-white/[0.03] border border-white/[0.10] rounded-2xl overflow-hidden group hover:border-yellow-400/30 transition-all duration-300 flex flex-col shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-yellow-400/10"
+            className="bg-white/[0.03] border border-white/[0.10] rounded-2xl overflow-hidden group
+                       hover:border-accent/30 transition-all duration-300 flex flex-col shadow-lg shadow-black/20
+                       hover:shadow-xl hover:shadow-accent/10"
           >
             <div className="h-48 overflow-hidden">
               <img
                 src={s.image}
-                alt={`${s.title} - transporte corporativo em Três Lagoas MS`}
+                alt={`${s.title} - mobilidade corporativa em Três Lagoas MS`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
             </div>
 
             <div className="p-7 flex flex-col flex-1">
-              <div className="w-12 h-12 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center mb-5 group-hover:bg-yellow-400/15 transition-colors">
-                <s.icon className="text-yellow-400" size={24} />
+              <div
+                className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5
+                           group-hover:bg-accent/15 transition-colors"
+              >
+                <s.icon className="text-gold" size={24} />
               </div>
 
-              <h3 className="font-bold text-base mb-2.5 text-white">
+              <h3 className="font-bold text-base mb-2.5 text-strong">
                 {s.title}
               </h3>
 
-              <p className="text-white/70 text-sm leading-relaxed flex-1">
+              <p className="text-muted2 text-sm leading-relaxed flex-1">
                 {s.desc}
               </p>
             </div>
@@ -137,11 +143,16 @@ const Services = () => (
           href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa%20de%20mobilidade."
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2.5 bg-yellow-400 text-black px-10 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all shadow-lg hover:shadow-yellow-400/40"
+          className="inline-flex items-center gap-2.5 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-semibold
+                     hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/35"
         >
-          Solicitar Cotação Corporativa
+          Solicitar proposta corporativa
           <ArrowRight size={18} />
         </a>
+
+        <p className="mt-4 text-subtle text-sm">
+          Retorno rápido • Proposta sob medida • Atendimento corporativo
+        </p>
       </motion.div>
     </div>
   </section>

@@ -6,88 +6,99 @@
 
 @layer base {
   :root {
-  --background: 210 20% 98%;
-  --foreground: 220 15% 10%;
+    --background: 210 20% 98%;
+    --foreground: 220 15% 10%;
 
-  --card: 0 0% 100%;
-  --card-foreground: 220 15% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 10%;
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 220 15% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 10%;
 
-  --primary: 220 15% 10%;
-  --primary-foreground: 0 0% 100%;
+    --primary: 220 15% 10%;
+    --primary-foreground: 0 0% 100%;
 
-  --secondary: 210 20% 94%;
-  --secondary-foreground: 220 15% 15%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 220 15% 15%;
 
-  --muted: 210 20% 94%;
-  --muted-foreground: 220 10% 45%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 220 10% 45%;
 
-  /* 🔥 NOVO AMARELO PREMIUM */
-  --accent: 45 100% 52%;
-  --accent-foreground: 220 15% 10%;
+    /* ✅ DOURADO INSTITUCIONAL (premium, menos “gritante”) */
+    --accent: 42 62% 52%;
+    --accent-foreground: 220 15% 10%;
 
-  --destructive: 0 80% 55%;
-  --destructive-foreground: 0 0% 100%;
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-  --border: 210 15% 88%;
-  --input: 210 15% 88%;
-  --ring: 45 100% 52%;
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 42 62% 52%;
 
-  --radius: 0.6rem;
+    --radius: 0.6rem;
 
-  /* 🔥 CORES CORPORATIVAS */
-  --navy: 220 18% 8%;
-  --navy-secondary: 220 16% 12%;
-  --charcoal: 220 15% 14%;
-  --surface-elevated: 210 20% 96%;
+    /* CORES CORPORATIVAS */
+    --navy: 220 18% 8%;
+    --navy-secondary: 220 16% 12%;
+    --charcoal: 220 15% 14%;
+    --surface-elevated: 210 20% 96%;
 
-  /* Hover mais elegante */
-  --accent-hover: 45 100% 45%;
+    /* Hover mais elegante */
+    --accent-hover: 42 62% 46%;
 
-  /* opcional (não usar muito) */
-  --brand-cyan: 197 100% 40%;
-  --brand-cyan-hover: 197 100% 33%;
-}
+    /* opcional (não usar muito) */
+    --brand-cyan: 197 100% 40%;
+    --brand-cyan-hover: 197 100% 33%;
+
+    /* ✅ HIERARQUIA DE TEXTO (para parar de “misturar branco/amarelo/cinza”) */
+    --text-strong: 210 20% 96%;
+    --text-muted: 210 10% 72%;
+    --text-subtle: 210 8% 60%;
+  }
 
   .dark {
     --background: 220 18% 6%;
-  --foreground: 210 20% 96%;
+    --foreground: 210 20% 96%;
 
-  --card: 220 18% 8%;
-  --card-foreground: 210 20% 96%;
+    --card: 220 18% 8%;
+    --card-foreground: 210 20% 96%;
 
-  --popover: 220 18% 8%;
-  --popover-foreground: 210 20% 96%;
+    --popover: 220 18% 8%;
+    --popover-foreground: 210 20% 96%;
 
-  --primary: 45 100% 52%;
-  --primary-foreground: 220 15% 10%;
+    --primary: 42 62% 52%;
+    --primary-foreground: 220 15% 10%;
 
-  --secondary: 220 15% 12%;
-  --secondary-foreground: 210 20% 96%;
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 210 20% 96%;
 
-  --muted: 220 15% 10%;
-  --muted-foreground: 210 10% 60%;
+    --muted: 220 15% 10%;
+    --muted-foreground: 210 10% 60%;
 
-  --accent: 45 100% 52%;
-  --accent-foreground: 220 15% 10%;
+    --accent: 42 62% 52%;
+    --accent-foreground: 220 15% 10%;
 
-  --destructive: 0 80% 55%;
-  --destructive-foreground: 0 0% 100%;
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-  --border: 220 15% 14%;
-  --input: 220 15% 14%;
-  --ring: 45 100% 52%;
+    --border: 220 15% 14%;
+    --input: 220 15% 14%;
+    --ring: 42 62% 52%;
 
-  --surface-elevated: 220 18% 10%;
+    --surface-elevated: 220 18% 10%;
 
-  --navy: 220 18% 6%;
-  --navy-secondary: 220 16% 10%;
-  --charcoal: 220 15% 12%;
+    --navy: 220 18% 6%;
+    --navy-secondary: 220 16% 10%;
+    --charcoal: 220 15% 12%;
 
-  --accent-hover: 45 100% 45%;
-}
+    --accent-hover: 42 62% 46%;
+
+    /* ✅ HIERARQUIA DE TEXTO */
+    --text-strong: 210 20% 96%;
+    --text-muted: 210 10% 72%;
+    --text-subtle: 210 8% 60%;
+  }
+
   * {
     @apply border-border;
   }
@@ -102,9 +113,15 @@
 }
 
 @layer utilities {
+  /* ✅ USE ISSO NO SITE (padrão empresa grande) */
+  .text-strong { color: hsl(var(--text-strong)); }
+  .text-muted2 { color: hsl(var(--text-muted)); }
+  .text-subtle { color: hsl(var(--text-subtle)); }
+  .text-gold { color: hsl(var(--accent)); }
+
   .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-yellow-300;
-}
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-yellow-300;
+  }
 
   .section-padding {
     @apply py-16 md:py-20;

@@ -158,7 +158,7 @@ const Contact = () => {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4 rounded-lg font-bold text-sm
+              className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4.5 rounded-lg font-bold
                          hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/35"
             >
               <MessageCircle size={20} />

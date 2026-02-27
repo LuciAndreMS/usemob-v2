@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Timer, Sparkles, Navigation2 } from "lucide-react";
+import { ShieldCheck, Timer, Sparkles, Navigation2, ArrowRight } from "lucide-react";
 import carousel2 from "@/assets/carousel-2.jpg";
 import carousel3 from "@/assets/carousel-3.jpg";
 import carousel4 from "@/assets/carousel-4.jpg";
@@ -8,35 +8,35 @@ import carousel5 from "@/assets/carousel-5.jpg";
 const vehicles = [
   {
     image: carousel2,
-    alt: "Sedan executivo para transporte corporativo em Três Lagoas",
+    alt: "Sedan executivo para mobilidade corporativa em Três Lagoas",
     label: "Sedan Executivo",
-    desc: "Conforto e discrição para deslocamentos de diretoria e executivos.",
+    desc: "Discrição e padrão profissional para deslocamentos estratégicos.",
   },
   {
     image: carousel3,
     alt: "Van corporativa para transporte de equipes em Mato Grosso do Sul",
     label: "Van Corporativa",
-    desc: "Capacidade para equipes, grupos empresariais e operações de campo.",
+    desc: "Capacidade e organização para equipes, turnos e operações de campo.",
   },
   {
     image: carousel4,
-    alt: "Frota de veículos executivos UseMOB para mobilidade empresarial",
+    alt: "Frota padronizada UseMOB para contratos corporativos",
     label: "Frota Padronizada",
-    desc: "Veículos revisados e padronizados para consistência em contratos corporativos.",
+    desc: "Consistência de atendimento com veículos revisados e padronizados.",
   },
   {
     image: carousel5,
-    alt: "Veículo utilitário para logística corporativa em Três Lagoas",
+    alt: "Veículo utilitário para demandas operacionais em Três Lagoas",
     label: "Utilitário Dedicado",
-    desc: "Apoio logístico com agilidade, rastreio e controle operacional.",
+    desc: "Apoio logístico com controle e rastreabilidade conforme a demanda.",
   },
 ];
 
 const highlights = [
-  { icon: ShieldCheck, title: "Seguro e conformidade", desc: "Documentação e padrões operacionais para empresas." },
-  { icon: Navigation2, title: "Rastreio e controle", desc: "Monitoramento em tempo real e gestão por operação." },
-  { icon: Timer, title: "Manutenção preventiva", desc: "Rotinas de revisão e inspeções periódicas." },
-  { icon: Sparkles, title: "Padrão executivo", desc: "Higienização e apresentação compatíveis com B2B." },
+  { icon: ShieldCheck, title: "Seguro e conformidade", desc: "Documentação e padrões operacionais para ambiente corporativo." },
+  { icon: Navigation2, title: "Rastreio e controle", desc: "Acompanhamento operacional e visibilidade do atendimento." },
+  { icon: Timer, title: "Manutenção preventiva", desc: "Rotinas de revisão e inspeções periódicas para reduzir riscos." },
+  { icon: Sparkles, title: "Padrão de apresentação", desc: "Higienização e apresentação compatíveis com contratos B2B." },
 ];
 
 const fadeUp = {
@@ -44,12 +44,12 @@ const fadeUp = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.10 },
+    transition: { duration: 0.5, delay: i * 0.1 },
   }),
 };
 
 const VehicleShowcase = () => (
-  <section className="section-padding bg-background">
+  <section className="section-padding bg-[#0B0D12]">
     <div className="section-container">
       <motion.div
         initial="hidden"
@@ -60,7 +60,7 @@ const VehicleShowcase = () => (
         <motion.span
           variants={fadeUp}
           custom={0}
-          className="text-accent text-xs font-semibold tracking-[0.2em] uppercase"
+          className="text-gold text-xs font-semibold tracking-[0.2em] uppercase"
         >
           Frota e Padrão Operacional
         </motion.span>
@@ -68,22 +68,22 @@ const VehicleShowcase = () => (
         <motion.h2
           variants={fadeUp}
           custom={1}
-          className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold mt-4 mb-4 text-foreground leading-tight"
+          className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold mt-4 mb-4 text-strong leading-tight"
         >
-          Veículos <span className="text-accent">padronizados</span> para contratos corporativos
+          Estrutura <span className="text-gold">padronizada</span> para atendimento corporativo
         </motion.h2>
 
         <motion.p
           variants={fadeUp}
           custom={2}
-          className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed"
+          className="text-muted2 text-lg max-w-3xl mx-auto leading-relaxed"
         >
-          Frota higienizada, revisada e dimensionada para operações corporativas — com consistência,
-          segurança e controle em cada deslocamento.
+          Veículos revisados, higienizados e dimensionados para operações corporativas — com consistência, segurança e
+          previsibilidade em cada atendimento.
         </motion.p>
       </motion.div>
 
-      {/* Highlights (empresa grande) */}
+      {/* Highlights */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">
         {highlights.map((h, i) => (
           <motion.div
@@ -93,14 +93,15 @@ const VehicleShowcase = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="rounded-2xl bg-card border border-border/70 p-5 flex gap-4 items-start"
+            className="rounded-2xl bg-white/[0.03] border border-white/[0.10] p-5 flex gap-4 items-start
+                       hover:border-accent/25 transition-all duration-300"
           >
             <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-              <h.icon className="text-accent" size={20} />
+              <h.icon className="text-gold" size={20} />
             </div>
             <div>
-              <p className="text-foreground font-semibold text-sm">{h.title}</p>
-              <p className="text-muted-foreground text-sm leading-relaxed mt-1">{h.desc}</p>
+              <p className="text-strong font-semibold text-sm">{h.title}</p>
+              <p className="text-muted2 text-sm leading-relaxed mt-1">{h.desc}</p>
             </div>
           </motion.div>
         ))}
@@ -116,7 +117,9 @@ const VehicleShowcase = () => (
             viewport={{ once: true }}
             custom={i}
             variants={fadeUp}
-            className="group rounded-2xl overflow-hidden border border-border/70 bg-card shadow-sm hover:shadow-lg transition-all duration-300"
+            className="group rounded-2xl overflow-hidden border border-white/[0.10] bg-white/[0.03]
+                       shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-accent/10 transition-all duration-300
+                       hover:border-accent/25"
           >
             <div className="h-56 overflow-hidden">
               <img
@@ -128,12 +131,36 @@ const VehicleShowcase = () => (
             </div>
 
             <div className="p-6">
-              <h3 className="font-bold text-foreground mb-1.5">{v.label}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{v.desc}</p>
+              <h3 className="font-bold text-strong mb-1.5">{v.label}</h3>
+              <p className="text-muted2 text-sm leading-relaxed">{v.desc}</p>
             </div>
           </motion.div>
         ))}
       </div>
+
+      {/* CTA (conversão) */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-center mt-14"
+      >
+        <a
+          href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa%20de%20mobilidade."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2.5 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-semibold
+                     hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/35"
+        >
+          Solicitar proposta corporativa
+          <ArrowRight size={18} />
+        </a>
+
+        <p className="mt-4 text-subtle text-sm">
+          Atendimento corporativo • Operação padronizada • Proposta sob medida
+        </p>
+      </motion.div>
     </div>
   </section>
 );

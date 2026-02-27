@@ -4,15 +4,15 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import Index from "./pages/Index.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
-// Páginas SEO
-import TransporteCorporativoTresLagoas from "./pages/TransporteCorporativoTresLagoas";
-import MobilidadeCorporativaMS from "./pages/MobilidadeCorporativaMS";
-import TransporteParaIndustriaMS from "./pages/TransporteParaIndustriaMS";
-import LocacaoVeiculosComMotorista from "./pages/LocacaoVeiculosComMotorista";
-import LogisticaEmpresarialMS from "./pages/LogisticaEmpresarialMS";
+// Páginas SEO (com extensão .tsx para evitar falha no build da Vercel)
+import TransporteCorporativoTresLagoas from "./pages/TransporteCorporativoTresLagoas.tsx";
+import MobilidadeCorporativaMS from "./pages/MobilidadeCorporativaMS.tsx";
+import TransporteParaIndustriaMS from "./pages/TransporteParaIndustriaMS.tsx";
+import LocacaoVeiculosComMotorista from "./pages/LocacaoVeiculosComMotorista.tsx";
+import LogisticaEmpresarialMS from "./pages/LogisticaEmpresarialMS.tsx";
 
 const queryClient = new QueryClient();
 

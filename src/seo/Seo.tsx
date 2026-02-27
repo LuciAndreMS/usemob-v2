@@ -3,9 +3,9 @@ import { useEffect } from "react";
 type SeoProps = {
   title: string;
   description: string;
-  canonicalPath: string; // ex: "/" ou "/mobilidade-corporativa-ms"
-  ogImage?: string; // default: /og-image.jpeg
-  robots?: string; // default: index,follow...
+  canonicalPath: string; // "/" | "/mobilidade-corporativa-ms" etc
+  ogImage?: string; // default: https://usemob.com.br/og-image.jpeg
+  robots?: string; // default: index/follow...
   jsonLd?: Record<string, any> | Record<string, any>[];
 };
 
@@ -64,18 +64,15 @@ export default function Seo({
   useEffect(() => {
     const canonical = `${SITE_URL}${canonicalPath.startsWith("/") ? canonicalPath : `/${canonicalPath}`}`;
 
-    // Title + Description
     document.title = title;
-    upsertMeta("description", description);
 
-    // Robots
+    upsertMeta("description", description);
     upsertMeta("robots", robots);
     upsertMeta("googlebot", robots);
 
-    // Canonical
     upsertCanonical(canonical);
 
-    // Open Graph (Google/LinkedIn/WhatsApp base)
+    // Open Graph
     upsertProperty("og:locale", "pt_BR");
     upsertProperty("og:site_name", "UseMOB Transportes e Locações");
     upsertProperty("og:type", "website");
@@ -84,7 +81,10 @@ export default function Seo({
     upsertProperty("og:description", description);
     upsertProperty("og:image", ogImage);
     upsertProperty("og:image:secure_url", ogImage);
-    upsertProperty("og:image:alt", "UseMOB — Mobilidade corporativa e transporte executivo em Três Lagoas e MS");
+    upsertProperty(
+      "og:image:alt",
+      "UseMOB — Mobilidade corporativa e transporte executivo em Três Lagoas e MS"
+    );
 
     // Twitter
     upsertMeta("twitter:card", "summary_large_image");
@@ -92,10 +92,13 @@ export default function Seo({
     upsertMeta("twitter:description", description);
     upsertMeta("twitter:image", ogImage);
 
-    // JSON-LD por rota (opcional)
+    // JSON-LD (por rota)
     if (jsonLd) {
       const payload = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
-      upsertJsonLd("usemob-jsonld", payload.length === 1 ? payload[0] : { "@context": "https://schema.org", "@graph": payload });
+      upsertJsonLd(
+        "usemob-jsonld",
+        payload.length === 1 ? payload[0] : { "@context": "https://schema.org", "@graph": payload }
+      );
     } else {
       const existing = document.getElementById("usemob-jsonld");
       if (existing) existing.remove();
@@ -103,3 +106,4 @@ export default function Seo({
   }, [title, description, canonicalPath, ogImage, robots, jsonLd]);
 
   return null;
+}

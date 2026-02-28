@@ -7,10 +7,10 @@ import carousel5 from "@/assets/showcase-4.jpg";
 
 const vehicles = [
   {
-    image: carousel2,
-    alt: "Veículo com checklist operacional e padrão corporativo",
-    label: "Padrão de Apresentação",
-    desc: "Veículos higienizados e preparados para atendimento corporativo com consistência.",
+    image: carousel5,
+    alt: "Veículos segurados e operação conforme normas corporativas",
+    label: "Seguro e Conformidade",
+    desc: "Operação com documentação regular e alinhada às exigências corporativas.",
   },
   {
     image: carousel3,
@@ -25,10 +25,10 @@ const vehicles = [
     desc: "Revisões periódicas para garantir continuidade e segurança da operação.",
   },
   {
-    image: carousel5,
-    alt: "Veículos segurados e operação conforme normas corporativas",
-    label: "Seguro e Conformidade",
-    desc: "Operação com documentação regular e alinhada às exigências corporativas.",
+    image: carousel2,
+    alt: "Veículo com checklist operacional e padrão corporativo",
+    label: "Padrão de Apresentação",
+    desc: "Veículos higienizados e preparados para atendimento corporativo com consistência.",
   },
 ];
 

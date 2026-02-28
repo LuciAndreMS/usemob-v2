@@ -8,27 +8,27 @@ import carousel5 from "@/assets/carousel-5.jpg";
 const vehicles = [
   {
     image: carousel2,
-    alt: "Sedan executivo para mobilidade corporativa em Três Lagoas",
-    label: "Sedan Executivo",
-    desc: "Discrição e padrão profissional para deslocamentos estratégicos.",
+    alt: "Veículo com checklist operacional e padrão corporativo",
+    label: "Padrão de Apresentação",
+    desc: "Veículos higienizados e preparados para atendimento corporativo com consistência.",
   },
   {
     image: carousel3,
-    alt: "Van corporativa para transporte de equipes em Mato Grosso do Sul",
-    label: "Van Corporativa",
-    desc: "Capacidade e organização para equipes, turnos e operações de campo.",
+    alt: "Monitoramento de frota com rastreamento em tempo real",
+    label: "Rastreio e Controle",
+    desc: "Monitoramento em tempo real e gestão operacional com previsibilidade.",
   },
   {
     image: carousel4,
-    alt: "Frota padronizada UseMOB para contratos corporativos",
-    label: "Frota Padronizada",
-    desc: "Consistência de atendimento com veículos revisados e padronizados.",
+    alt: "Manutenção preventiva de veículos corporativos",
+    label: "Manutenção Preventiva",
+    desc: "Revisões periódicas para garantir continuidade e segurança da operação.",
   },
   {
     image: carousel5,
-    alt: "Veículo utilitário para demandas operacionais em Três Lagoas",
-    label: "Utilitário Dedicado",
-    desc: "Apoio logístico com controle e rastreabilidade conforme a demanda.",
+    alt: "Veículos segurados e operação conforme normas corporativas",
+    label: "Seguro e Conformidade",
+    desc: "Operação com documentação regular e alinhada às exigências corporativas.",
   },
 ];
 

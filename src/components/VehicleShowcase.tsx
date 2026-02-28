@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ShieldCheck, Timer, Sparkles, Navigation2, ArrowRight } from "lucide-react";
 import carousel2 from "@/assets/showcase-1.jpg";
 import carousel3 from "@/assets/showcase-2.jpg";
-import carousel4 from "@/assets/carousel-4.jpg";
+import carousel4 from "@/assets/showcase-3.jpg";
 import carousel5 from "@/assets/showcase-4.jpg";
 
 const vehicles = [

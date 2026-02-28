@@ -69,7 +69,7 @@ const Services = () => (
           custom={0}
           className="text-gold text-xs font-semibold tracking-[0.2em] uppercase"
         >
-          Soluções Corporativas
+          Soluções de mobilidade e logística corporativa
         </motion.span>
 
         <motion.h2

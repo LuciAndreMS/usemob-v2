@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
+import { WHATSAPP_URL } from "@/constants/whatsapp";
 
 const links = [
   { label: "Início", href: "#inicio" },
@@ -42,7 +43,7 @@ const Navbar = () => {
           ))}
 
           <a
-            href={WHATSAPP_PROPOSTA}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold
@@ -84,7 +85,7 @@ const Navbar = () => {
               ))}
 
               <a
-                href={WHATSAPP_PROPOSTA}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center

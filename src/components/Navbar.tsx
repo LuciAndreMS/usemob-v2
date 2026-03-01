@@ -12,8 +12,7 @@ const links = [
   { label: "Contato", href: "#contato" },
 ];
 
-const WHATSAPP_PROPOSTA =
-  "https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa.";
+import { WHATSAPP_URL } from "@/constants/whatsapp";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

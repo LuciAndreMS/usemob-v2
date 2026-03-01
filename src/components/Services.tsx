@@ -43,8 +43,8 @@ const services = [
   },
   {
     icon: Bus,
-    title: "Locação de Veículos com Motorista (Operação Assistida)",
-    desc: "Soluções sob medida para projetos e operações contínuas, com gestão operacional inclusa e padronização de atendimento.",
+    title: "Transporte Executivo para Grupos (Vans e Veículos Coletivos)",
+    desc: "Soluções estruturadas para eventos, operações e deslocamentos corporativos, com conforto, segurança e padronização no atendimento.",
     image: serv05,
   },
   {

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { WHATSAPP_URL } from "@/constants/whatsapp";
 
 const Hero = () => (
   <section id="inicio" className="relative min-h-[92vh] flex items-center overflow-hidden">
@@ -57,7 +58,7 @@ const Hero = () => (
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa%20de%20mobilidade."
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 bg-accent text-accent-foreground px-10 py-4 rounded-lg font-semibold text-base

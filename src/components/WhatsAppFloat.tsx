@@ -1,8 +1,9 @@
 import { MessageCircle } from "lucide-react";
+import { WHATSAPP_URL } from "@/constants/whatsapp";
 
 const WhatsAppFloat = () => (
   <a
-    href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+    href={WHATSAPP_URL}
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Falar no WhatsApp"

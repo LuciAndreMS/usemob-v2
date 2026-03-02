@@ -1,8 +1,6 @@
-import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import logo from "@/assets/logo.png";
-
-const WHATSAPP_PROPOSTA =
-  "https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20corporativa.";
+import { WHATSAPP_URL } from "@/constants/whatsapp";
 
 const Footer = () => (
   <footer className="border-t border-white/10 bg-[#0B0D12]">
@@ -24,17 +22,6 @@ const Footer = () => (
           <p className="text-subtle text-xs mb-6">
             Atendimento corporativo • Contratos recorrentes • Três Lagoas e rotas estratégicas no MS
           </p>
-
-          <a
-            href={WHATSAPP_PROPOSTA}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2.5 rounded-lg text-sm font-bold
-                       hover:bg-accent-hover transition-colors shadow-lg hover:shadow-accent/25"
-          >
-            Solicitar proposta
-            <ArrowRight size={14} />
-          </a>
         </div>
 
         {/* Navigation */}
@@ -63,7 +50,7 @@ const Footer = () => (
           </ul>
         </div>
 
-        {/* Services (SEO links discretos) */}
+        {/* Services */}
         <div>
           <h4 className="font-bold text-xs uppercase tracking-[0.15em] mb-6 text-subtle">
             Soluções
@@ -109,7 +96,7 @@ const Footer = () => (
             <li className="flex items-center gap-3">
               <Phone className="text-gold flex-shrink-0" size={15} />
               <a
-                href={WHATSAPP_PROPOSTA}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted2 text-sm hover:text-gold transition-colors"

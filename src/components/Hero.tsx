@@ -20,7 +20,7 @@ const Hero = () => (
     </div>
 
     <div className="w-full">
-      <div className="section-container relative z-10 pt-28 pb-16">
+      <div className="section-container relative z-10 pt-24 pb-16 md:pt-28">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,19 +28,20 @@ const Hero = () => (
           className="max-w-3xl"
         >
           {/* Badge (premium, discreto) */}
-          <span className="inline-flex items-center text-gold text-xs font-semibold tracking-[0.25em] uppercase mb-6
-                           border border-accent/25 px-5 py-2 rounded-full bg-accent/10 backdrop-blur-sm">
+          <span
+            className="inline-flex items-center text-gold text-xs font-semibold tracking-[0.25em] uppercase mb-6
+                           border border-accent/25 px-5 py-2 rounded-full bg-accent/10 backdrop-blur-sm"
+          >
             Mobilidade Corporativa
           </span>
 
           {/* Headline (B2B / indústria) */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-[4.2rem] font-bold leading-[1.05] mb-6 text-strong">
-            Gestão de{" "}
-            <span className="text-gold">Mobilidade Corporativa</span>{" "}
-            com segurança e previsibilidade para a sua operação
+            Gestão de <span className="text-gold">Mobilidade Corporativa</span> com segurança e previsibilidade
+            para a sua operação
           </h1>
 
-          {/* Subheadline (corporativa, sem “marketing exagerado”) */}
+          {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted2 mb-8 max-w-2xl leading-relaxed">
             Atendimento estruturado para empresas e indústrias em Três Lagoas e região, com operação organizada,
             padrão profissional e controle operacional.
@@ -69,9 +70,7 @@ const Hero = () => (
             </a>
 
             <a
-              href="https://api.whatsapp.com/send?phone=5567999636464&text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20sobre%20mobilidade%20corporativa."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contato"
               className="inline-flex items-center justify-center gap-2.5 border border-white/15 text-strong px-10 py-4 rounded-lg font-semibold text-base
                          hover:border-accent/40 hover:text-gold transition-all backdrop-blur-sm"
             >
@@ -80,7 +79,7 @@ const Hero = () => (
             </a>
           </div>
 
-          {/* Linha de confiança (clean) */}
+          {/* Linha de confiança */}
           <div className="mt-10 flex items-center gap-4 text-subtle text-sm font-medium">
             <span className="w-10 h-px bg-accent/60" />
             Contratos corporativos • Atendimento contínuo e sob demanda • Operação padronizada

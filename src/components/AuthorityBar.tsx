@@ -4,9 +4,11 @@ import { Building2, Clock, Users, BarChart3, MapPin } from "lucide-react";
 const stats = [
   { icon: BarChart3, value: "Desde 2017", label: "Operação Contínua", sub: "Histórico consistente na região" },
   { icon: Building2, value: "B2B", label: "Foco Corporativo", sub: "Atendimento para empresas e indústrias" },
-  { icon: Users, value: "Equipe", label: "Motoristas Qualificados", sub: "Padrão profissional e postura" },
-  { icon: Clock, value: "Escalas", label: "Atendimento Planejado", sub: "Contínuo e sob demanda" },
-  { icon: MapPin, value: "MS", label: "Cobertura Regional", sub: "Três Lagoas e rotas estratégicas" },
+
+  { icon: Users, value: "+50.000", label: "Atendimentos", sub: "Operações realizadas com padrão e pontualidade" },
+  { icon: Clock, value: "+10", label: "Empresas atendidas", sub: "Contratos e demandas recorrentes" },
+
+  { icon: MapPin, value: "MS", label: "Cobertura Regional", sub: "Três Lagoas, Inocência, Água Clara e Ribas do Rio Pardo" },
 ];
 
 const AuthorityBar = () => (

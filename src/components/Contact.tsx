@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { MessageCircle, Building2, Clock, ShieldCheck } from "lucide-react";
-
-const WHATSAPP_PHONE = "5567999636464";
+import { WHATSAPP_URL } from "@/constants/whatsapp";
 
 const Contact = () => {
   const [nome, setNome] = useState("");
@@ -19,14 +18,18 @@ const Contact = () => {
       `E-mail: ${email || "—"}`,
       "",
       "Mensagem:",
-      `${mensagem?.trim() || "—"}`,
+      `${mensagem?.trim() || "—"}`
     ];
     return lines.join("\n");
   }, [nome, empresa, email, mensagem]);
 
   const whatsappHref = useMemo(() => {
     const text = encodeURIComponent(payloadText);
-    return `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${text}`;
+
+    // WHATSAPP_URL já contém ?phone=...&text=...
+    // então aqui apenas substituímos o text final (mais seguro do que concatenar)
+    const base = WHATSAPP_URL.split("&text=")[0];
+    return `${base}&text=${text}`;
   }, [payloadText]);
 
   return (
@@ -53,7 +56,7 @@ const Contact = () => {
 
             <p className="text-muted2 text-lg mb-10 leading-relaxed">
               Estruturamos mobilidade corporativa com padrão profissional, previsibilidade e controle operacional.
-              Atendimento para empresas em Três Lagoas e rotas estratégicas no MS.
+              Atendimento para empresas e indústrias em Três Lagoas, Inocência, Água Clara e Ribas do Rio Pardo.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-4">
@@ -153,7 +156,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* BOTÃO IDÊNTICO AO DA SUA 2ª IMAGEM (barra cheia) */}
+            {/* Botão */}
             <a
               href={whatsappHref}
               target="_blank"

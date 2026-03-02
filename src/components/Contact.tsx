@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
-import { MessageCircle, Building2, Clock, ShieldCheck } from "lucide-react";
-import { WHATSAPP_URL } from "@/constants/whatsapp";
+import { Mail, Building2, Clock, ShieldCheck } from "lucide-react";
 
 const Contact = () => {
   const [nome, setNome] = useState("");
@@ -23,13 +22,10 @@ const Contact = () => {
     return lines.join("\n");
   }, [nome, empresa, email, mensagem]);
 
-  const whatsappHref = useMemo(() => {
-    const text = encodeURIComponent(payloadText);
-
-    // WHATSAPP_URL já contém ?phone=...&text=...
-    // então aqui apenas substituímos o text final (mais seguro do que concatenar)
-    const base = WHATSAPP_URL.split("&text=")[0];
-    return `${base}&text=${text}`;
+  const mailtoHref = useMemo(() => {
+    const subject = encodeURIComponent("Solicitação corporativa - UseMOB");
+    const body = encodeURIComponent(payloadText);
+    return `mailto:contato@usemob.com.br?subject=${subject}&body=${body}`;
   }, [payloadText]);
 
   return (
@@ -39,6 +35,7 @@ const Contact = () => {
 
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -109,7 +106,7 @@ const Contact = () => {
             </h3>
 
             <p className="relative text-muted2 text-sm mb-5 leading-relaxed">
-              Envie sua solicitação para o comercial.
+              Envie sua solicitação diretamente para o nosso comercial.
             </p>
 
             <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -158,14 +155,12 @@ const Contact = () => {
 
             {/* Botão */}
             <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={mailtoHref}
               className="flex items-center justify-center gap-3 w-full bg-accent text-accent-foreground px-6 py-4.5 rounded-lg font-bold
                          hover:bg-accent-hover transition-all shadow-lg hover:shadow-accent/35"
             >
-              <MessageCircle size={20} />
-              Falar com o comercial no WhatsApp
+              <Mail size={20} />
+              Enviar solicitação por e-mail
             </a>
           </motion.div>
         </div>

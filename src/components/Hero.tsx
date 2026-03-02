@@ -34,7 +34,7 @@ const Hero = () => (
           </span>
 
           {/* Headline (B2B / indústria) */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-[4.2rem] font-bold leading-[1.05] mb-6 text-strong">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-[4.2rem] font-bold leading-[1.05] mb-6 text-strong">
             Gestão de{" "}
             <span className="text-gold">Mobilidade Corporativa</span>{" "}
             com segurança e previsibilidade para a sua operação

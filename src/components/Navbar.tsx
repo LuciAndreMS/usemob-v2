@@ -13,8 +13,6 @@ const links = [
   { label: "Contato", href: "#contato" },
 ];
 
-import { WHATSAPP_URL } from "@/constants/whatsapp";
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
